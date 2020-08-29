@@ -1,8 +1,33 @@
-.custom-navbar-wrap{
-  .custom-navbar{
-    display: flex;
-    padding: 0 15px;
-    align-items: center;
+.custom-tabbar-wrap{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 112px;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background-color: #24242a;
+  color: #fff;
+  border-radius: 40px 40px 0 0;
+  // .custom-navbar{
+  //   display: flex;
+  //   align-items: center;
+  // }
+  .tab-item{
+    height: 100%;
+    padding: 20px 0;
+    width: calc(100vw / 3);
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    flex: 1;
+    align-items: center; 
+    font-size: 24px; 
+  }
+  .tab-text{
+    margin-top: 6px;
   }
   .login-img{
     margin-left: 10px;

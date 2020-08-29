@@ -1,62 +1,54 @@
 import React, { Component } from 'react'
-import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { AtTabBar } from 'taro-ui'
-import "taro-ui/dist/style/components/tab-bar.scss";
-import "taro-ui/dist/style/components/badge.scss";
-import "taro-ui/dist/style/components/icon.scss";
+import { AtIcon } from 'taro-ui'
+import { connect } from 'react-redux'
 import './index.scss'
+import { setTab } from '../../store/actions/global'
 
-export default class Index extends Component {
+const mapState = state => state.global
+
+const Index = props => {
   
-  constructor(props) {
-    let { index } = props
-    super(props)
-    this.state = {
-      current: index,
-      tabList: [
-        { title: '首页', iconType: 'home'},
-        { title: '发现', iconType: 'eye' },
-        { title: '我的', iconType: 'user', text: '100', max: 99 }
-      ]
-    }
+  const tabList = [
+    { title: '首页', iconType: 'home'},
+    { title: '发现', iconType: 'eye' },
+    { title: '我的', iconType: 'user'}
+  ]
+  const handleClick =  (value) => {
+    props.setTab(value)
   }
-  
-  componentWillMount () { 
-  }
-
-  componentDidMount () { }
-
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
-  handleClick =  (value) => {
-    
-    let paths = [
-      '/pages/index/index',
-      '/pages/found/index',
-      '/pages/my/index'
-    ]
-    let path = paths[value]
-    this.setState({
-      current: value
+  /**
+   * @desc 处理tab item
+   */
+  const getTab = () => {
+    let { tabIndex } = props
+    return tabList.map((item, key) => {
+      if (key !== tabIndex) {
+        return (<View
+          key={key}
+          className='tab-item'
+          onClick={() => handleClick(key)} 
+        >
+          <AtIcon value={item.iconType} size='20' color='#FFF'></AtIcon>
+        </View>)
+      }
+      return (<View
+        key={key}
+        className='tab-item'
+        onClick={() => handleClick(key)} 
+      >
+        <AtIcon value={item.iconType} size='20' color='#FFF'></AtIcon>
+        <View  className='tab-text'>
+          { item.title }
+        </View>
+      </View>)
     })
-
-    Taro.navigateTo({ url: path})
   }
-  render () {
-    let { tabList } = this.state
     return (
-      <View className='custom-navbar-wrap'>
-        <AtTabBar
-          fixed
-          tabList={tabList}
-          onClick={this.handleClick}
-          current={this.state.current}
-        />
+      <View className='custom-tabbar-wrap'>
+        { getTab() }
       </View>
     )
-  }
 }
+
+export default connect(mapState, { setTab })(Index)

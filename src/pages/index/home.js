@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
 import { View } from '@tarojs/components'
 import { connect } from 'react-redux'
-import Tabbar from '../../components/tabbar'
-import Home from './home'
-import Found from './found'
-import User from './user'
-import './index.scss'
+
+import CustomNavBar from '../../components/navbar'
+
+import './home.scss'
+
+import MainProduct from './components/main-product'
+import OrderNews from './components/order-news'
+import NewsWarp from './components/news-warp'
 
 const mapState = state => state.global
 class Index extends Component {
-  state = {
-    components: [Home, Found, User]
-  }
+  
   componentWillMount () { }
 
   componentDidMount () { }
@@ -22,15 +23,13 @@ class Index extends Component {
 
   componentDidHide () { }
   render () {
-    let { tabIndex } = this.props
-    let { components } = this.state
-    let Com = components[tabIndex]
-    
+    let title = '首页'
     return (
-      <View className='layout'>
-        <Com />
-        <Tabbar />
-        
+      <View className='index'>
+        <CustomNavBar title={title} />
+        <MainProduct />
+        <OrderNews />
+        <NewsWarp />
       </View>
     )
   }

@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { View, Text, Image } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
-import Tabbar from '../../components/tabbar'
 import CustomNavBar from '../../components/navbar'
 
-import HomePageComponents from './homePageComponents'
-import './index.scss'
+import HomePageComponents from './user/homePageComponents'
+import './user/index.scss'
 
 export default class Index extends Component {
 
@@ -56,7 +55,6 @@ export default class Index extends Component {
          </View>
          <HomePageComponents icon1='calendar' icon2='alert-circle' title1='购买记录' title2='我的评论' />
          <HomePageComponents icon1='iphone' icon2='message' title1='APP账号同步' title2='意见反馈' />
-        <Tabbar index={2} />
       </View>
     )
   }

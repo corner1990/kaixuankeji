@@ -1,0 +1,62 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  .header-text{
+    font-size: 36px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Microsoft YaHei, FangSong;
+  }
+}
+.me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  margin-top: 20px;
+  box-shadow: 0 6px 10px #ddd;
+  .bookcase,  .magazine{
+    flex: 1;
+    text-align: center;
+  }
+  .line {
+    width: 1px;
+    height: 100px;
+    background: #eee;
+  }
+}
+
+.my{
+  padding: 0 30px;
+  .avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    border: 6px solid #eee;
+  }
+}
+.homePage{
+  margin-top: 60px;
+  box-shadow: 0 6px 10px #ddd;
+  .common {
+     height: 120px;
+     width: 100%;
+     align-items: center;
+     justify-content: center;
+     display: flex;
+     .commonLeft {
+       width: 80%;
+       display: flex;
+       align-items: center;
+       height: 140px;
+       .commonLeftHade {
+         margin-left: 20px;
+       }
+     }
+  }
+  .underline {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px #eee solid;
+  }
+}
