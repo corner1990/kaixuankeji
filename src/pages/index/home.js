@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
 import { View } from '@tarojs/components'
 import { connect } from 'react-redux'
-
 import CustomNavBar from '../../components/navbar'
 
 import './home.scss'
 
-import MainProduct from './components/main-product'
-import OrderNews from './components/order-news'
-import NewsWarp from './components/news-warp'
+import MainProduct from './home/main-product'
+import OrderNews from './home/order-news'
+import NewsWarp from './home/news-warp'
 
 const mapState = state => state.global
-class Index extends Component {
+class Home extends Component {
   
   componentWillMount () { }
 
@@ -22,10 +21,18 @@ class Index extends Component {
   componentDidShow () { }
 
   componentDidHide () { }
+
+  touchstart = e => {
+    e.stopPropagation()
+    e.preventDefault()
+    console.log('说噢耶')
+  }
   render () {
     let title = '首页'
+    let { touchstart } = this
+
     return (
-      <View className='index'>
+      <View className='home' onTouchStart={touchstart} onTouchMove={touchstart}>
         <CustomNavBar title={title} />
         <MainProduct />
         <OrderNews />
@@ -35,4 +42,4 @@ class Index extends Component {
   }
 }
 
-export default connect(mapState)(Index)
+export default connect(mapState)(Home)

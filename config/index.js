@@ -1,7 +1,7 @@
 import TerserPlugin from "terser-webpack-plugin"
 
 const config = {
-  projectName: 'self-miniprogram',
+  projectName: 'mini-template',
   date: '2020-8-1',
   designWidth: 750,
   deviceRatio: {
