@@ -1,8 +1,9 @@
 .list-page{
-  background-color: rgba($color: #000000, $alpha: .85);
+  // background-color: rgba($color: #000000, $alpha: .85);
+  color: #f8f8f8;
   min-height: 100vh;
   .list-navbar{
-    background: transparent;
+    background: #22242a;
     &::after{
       display: none;
     }
@@ -16,6 +17,7 @@
   .custom-backhistory-wrap{
     width: 100vw;
     position: fixed;
-    z-index: 2
+    z-index: 2;
+    background: #22242a;
   }
 }

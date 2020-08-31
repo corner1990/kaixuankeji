@@ -1,5 +1,6 @@
 export default {
   pages: [
+    
     'pages/index/index',
     'pages/endorsement/index',
     'pages/found/index',
