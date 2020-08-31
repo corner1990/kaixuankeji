@@ -43,7 +43,8 @@ export default class Index extends Component {
     imgWarp.style.transition = 'none'
     dragInfo.originY = cssTransform(imgWarp, 'translateY')
     dragInfo.startY = touch.pageY
-    console.log('dragInfo.originY', dragInfo.originY)
+    // 禁止页面滚动
+    this.props.setIsTouch(true)
   }
   /***
    * @desc 触摸按下移动
@@ -78,6 +79,9 @@ export default class Index extends Component {
     let currY = cssTransform(imgWarp, 'translateY')
     let val = currY < -50 ? -100 : 10
     cssTransform(imgWarp, 'translateY', val)
+
+    // 禁止页面滚动
+    this.props.setIsTouch()
 
   }
   /**

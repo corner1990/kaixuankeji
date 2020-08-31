@@ -11,7 +11,9 @@ import NewsWarp from './home/news-warp'
 
 const mapState = state => state.global
 class Home extends Component {
-  
+  state = {
+    isTouch: false
+  }
   componentWillMount () { }
 
   componentDidMount () { }
@@ -25,16 +27,27 @@ class Home extends Component {
   touchstart = e => {
     e.stopPropagation()
     e.preventDefault()
-    console.log('说噢耶')
+    let { isTouch } = this.state
+    if(isTouch) {
+      this.setIsTouch()
+    }
+  }
+  /**
+   * @desc 控制是否页面可以滚动
+   * @param { number | undefined } val 
+   */
+  setIsTouch = (isTouch = false) => {
+    this.setState({ isTouch })
   }
   render () {
     let title = '首页'
-    let { touchstart } = this
+    let { touchstart, setIsTouch } = this
+    let { isTouch } = this.state
 
     return (
-      <View className='home' onTouchStart={touchstart} onTouchMove={touchstart}>
+      <View className={`home ${isTouch ? 'hidden': ''}`} onTouchStart={touchstart} onTouchMove={touchstart}>
         <CustomNavBar title={title} />
-        <MainProduct />
+        <MainProduct setIsTouch={setIsTouch} />
         <OrderNews />
         <NewsWarp />
       </View>

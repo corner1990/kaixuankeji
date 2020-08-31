@@ -1,4 +1,7 @@
 .home{
   max-height: 100vh;
-  overflow: hidden;
+  overflow: auto;
+  &.hidden{
+    overflow: hidden;
+  }
 }
