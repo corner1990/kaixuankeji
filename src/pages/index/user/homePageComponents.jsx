@@ -19,7 +19,7 @@ export default class Index extends Component {
   
   render () {
     const { icon1, icon2, title1,  title2, click1 } = this.props;
-    console.log(click1)
+
     return (
       <View className='homePage'>
         <View className='common' onClick={()=>{click1()}}>

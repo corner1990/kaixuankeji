@@ -5,12 +5,13 @@ import Tabbar from '../../components/tabbar'
 import Home from './home'
 import Found from './found'
 import User from './user'
+import Endorsement from './endorsement'
 import './index.scss'
 
 const mapState = state => state.global
 class Index extends Component {
   state = {
-    components: [Home, Found, User]
+    components: [Home, Found, User, Endorsement]
   }
   componentWillMount () { }
 

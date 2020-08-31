@@ -23,6 +23,7 @@ const Index = props => {
   const getTab = () => {
     let { tabIndex } = props
     return tabList.map((item, key) => {
+
       if (key !== tabIndex) {
         return (<View
           key={key}
@@ -30,8 +31,10 @@ const Index = props => {
           onClick={() => handleClick(key)} 
         >
           <AtIcon value={item.iconType} size='20' color='#FFF'></AtIcon>
+          {tabIndex == 3 && key ==2 ? <View  className='tab-text'>我的</View> : null}
         </View>)
       }
+
       return (<View
         key={key}
         className='tab-item'

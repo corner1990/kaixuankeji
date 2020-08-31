@@ -1,0 +1,125 @@
+page{
+    background: rgb(252, 252, 252);
+}
+.my{
+    padding: 0 30px;
+    .avatar{
+      width: 140px;
+      height: 140px;
+      border-radius: 100px;
+      border: 6px solid #eee;
+    }
+  }
+.header {
+    padding: 15px 0;
+    overflow: hidden;
+    .header-icon-wrap{
+      float: left;
+      display: inline-block;
+      margin-right: 50px;
+    }
+    .header-text-wrap{
+      display: flex;
+      justify-content:space-around;
+      width: 60%;
+      
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Microsoft YaHei, FangSong;
+      text-align: right;
+    }
+    .info-num{
+      // font-weight: bold;
+      font-size: 28px;
+    }
+    .info-text{
+      color: #ababab;
+      font-size: 24px;
+    }
+  }
+
+  .money-wrap{
+    background: #fff;
+    box-shadow: 0 6px 10px #ddd;
+    padding: 20px 25px 80px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    .money-title{
+      display: flex;
+      justify-content:space-between;
+      line-height: 76px;
+      border-bottom: 1px solid #e9e9e9;
+      margin-bottom: 26px;
+    }
+    .money-num{
+      color: rgb(194, 0, 0);
+    }
+    .money-btn{
+        float: right;
+        display: inline-block;
+        padding:6px 20px;
+        background: rgb(177, 0, 0);
+        color:#fff;
+        border-radius: 10px;
+        font-size: 28px;
+    }
+  }
+
+  .income-wrap{
+    background: #fff;
+    box-shadow: 0 6px 10px #ddd;
+    padding: 20px 25px;
+    border-radius: 10px;
+    .income-item{
+        display: flex;
+        justify-content:space-between;
+        line-height: 76px;
+        border-bottom: 1px solid #e9e9e9;
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+    .income-num{
+        color: rgb(194, 0, 0);
+    }
+  }
+
+  .me {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    margin-top: 60px;
+    box-shadow: 0 6px 10px #ddd;
+    border-radius: 10px;
+    .bookcase,  .magazine{
+      flex: 1;
+      text-align: center;
+    }
+    .line {
+      width: 1px;
+      height: 100px;
+      background: #eee;
+    }
+  }
+
+  .link-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background: #fff;
+    margin-top: 60px;
+    box-shadow: 0 6px 10px #ddd;
+    border-radius: 10px;
+    padding:20px;
+
+    .info-wrap{
+        width: 78%;
+        line-height: 50px; 
+    }
+    .text-des{
+        font-size: 26px;
+    }
+    .arrow{
+        color: rgb(194, 0, 0);
+    }
+  }

@@ -2,12 +2,16 @@ import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { View, Text, Image } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
+import { connect } from 'react-redux'
 import CustomNavBar from '../../components/navbar'
+import { setTab } from '../../store/actions/global'
 
 import HomePageComponents from './user/homePageComponents'
 import './user/index.scss'
 
-export default class Index extends Component {
+const mapState = state => state.global
+
+class Index extends Component {
 
   componentWillMount() { }
 
@@ -19,12 +23,13 @@ export default class Index extends Component {
 
   componentDidHide() { }
 
-  toEndorsement() {
-    Taro.navigateTo({ url: '/pages/endorsement/index'})
+  toEndorsement = ()=>{
+    this.props.setTab(3)
   }
 
   render() {
     let src = 'https://ipxcdn.jfshare.com/ipxmall/avatar/1124addfcd0cec4ae8db434154d8162a.jpg'
+
     return (
       <View className='my'>
         <CustomNavBar title='我的' />
@@ -92,3 +97,5 @@ export default class Index extends Component {
     )
   }
 }
+
+export default connect(mapState, { setTab })(Index)
