@@ -25,8 +25,8 @@ export default class Index extends Component {
     let { src } = this.state
     return (
       <View className='new-item'>
-         <Image src={ src } alt="img" srcset="" className='new-img' />
-        <View class="new-item-text">2020年8月</View>
+         <Image src={src} alt='img' srcset='' className='new-img' />
+        <View class='new-item-text'>2020年8月</View>
       </View>
     )
   }

@@ -12,7 +12,8 @@ import NewsWarp from './home/news-warp'
 const mapState = state => state.global
 class Home extends Component {
   state = {
-    isTouch: false
+    isTouch: false,
+    showNavBar: true
   }
   componentWillMount () { }
 
@@ -39,14 +40,23 @@ class Home extends Component {
   setIsTouch = (isTouch = false) => {
     this.setState({ isTouch })
   }
-  render () {
+  /**
+   * @desc 动态控制是否显示navBar
+   */
+  getNavBar = () => {
     let title = '首页'
+    let { showNavBar } = this.state
+    if(!showNavBar) return ''
+    return (<CustomNavBar title={title} />)
+  }
+  render () {
+    
     let { touchstart, setIsTouch } = this
     let { isTouch } = this.state
 
     return (
       <View className={`home ${isTouch ? 'hidden': ''}`} onTouchStart={touchstart} onTouchMove={touchstart}>
-        <CustomNavBar title={title} />
+        { this.getNavBar() }
         <MainProduct setIsTouch={setIsTouch} />
         <OrderNews />
         <NewsWarp />

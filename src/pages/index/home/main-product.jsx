@@ -23,7 +23,8 @@ export default class Index extends Component {
 
   componentDidHide () { }
 
-  imgWarp = null
+  imgWarp = null // 可拖拽图片
+  summaryWarp = null // 图片拖拽后显示的内容
   /**
    * @desc 查看详情
    */
@@ -53,7 +54,7 @@ export default class Index extends Component {
     e.stopImmediatePropagation() // 阻止事件冒泡
     e.preventDefault()
     let touch = e.changedTouches[0]
-    let { cssTransform, imgWarp } = this
+    let { cssTransform, imgWarp, setSummaryTransform } = this
     let { dragInfo } = this.state
 
     let offsetY = dragInfo.startY - touch.pageY
@@ -69,20 +70,30 @@ export default class Index extends Component {
     
     // val = val > 0 ? 0 : val < -100 ? -100 : val
     dragInfo.translateY = cssTransform(imgWarp, 'translateY', val)
+    setSummaryTransform(val)
     this.setState({ dragInfo })
   }
   touchEnd = e => {
     e.stopImmediatePropagation() // 阻止事件冒泡
     e.preventDefault()
-    let { cssTransform, imgWarp } = this
+    let { cssTransform, imgWarp, setSummaryTransform } = this
     imgWarp.style.transition = "transform .3s";
     let currY = cssTransform(imgWarp, 'translateY')
     let val = currY < -50 ? -100 : 10
     cssTransform(imgWarp, 'translateY', val)
-
+    setSummaryTransform(val)
     // 禁止页面滚动
     this.props.setIsTouch()
 
+  }
+  /**
+   * @desc 显示杂志摘要
+   * @param { number } val 
+   */
+  setSummaryTransform = val => {
+    let { summaryWarp, cssTransform } = this
+    val = Math.abs(val) / 200 + .5
+    cssTransform(summaryWarp, 'scale', val )
   }
   /**
    * @des 动画
@@ -140,6 +151,7 @@ export default class Index extends Component {
   render () {
     let { src } = this.state
     let { viewDetail, touchStart, touchMove, touchEnd } = this
+    
     return (
       <View className='mian-product' onClick={viewDetail} >
         <View
@@ -150,6 +162,19 @@ export default class Index extends Component {
           ref={el => this.imgWarp = el}
         >
           <Image src={src} alt='img' srcset='' className='product-img' />
+          
+        </View>
+        <View
+          className='summary-wrap'
+          onClick={viewDetail}
+          ref={el => this.summaryWarp = el}
+        >
+          <View className='title'>
+            期刊摘要
+          </View>
+          <View className='desc'>
+            作为mini包袋的先行者，Jacquemus的Le Chiquito系列包袋最小的尺寸，甚至不足手掌大小，一次次刷新着我们对mini手袋的认知。
+          </View>
         </View>
         <View className='product-info-wrap' >
           <View className='product-info'>

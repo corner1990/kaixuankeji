@@ -30,7 +30,6 @@ class Index extends Component {
       <View className='layout'>
         <Com />
         <Tabbar />
-        
       </View>
     )
   }
