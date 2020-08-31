@@ -40,8 +40,10 @@ export default class Index extends Component {
     let { dragInfo } = this.state
     let { cssTransform, imgWarp } = this
     let touch = e.touches[0]
+    imgWarp.style.transition = 'none'
     dragInfo.originY = cssTransform(imgWarp, 'translateY')
     dragInfo.startY = touch.pageY
+    console.log('dragInfo.originY', dragInfo.originY)
   }
   /***
    * @desc 触摸按下移动
@@ -54,17 +56,29 @@ export default class Index extends Component {
     let { dragInfo } = this.state
 
     let offsetY = dragInfo.startY - touch.pageY
-    let currY = cssTransform(imgWarp, 'translateY')
-
-    let val = currY < dragInfo.originY ? dragInfo.originY - offsetY : -(dragInfo.originY + offsetY)
-    console.log('val', val, currY, dragInfo.originY)
-    val = val > 0 ? 0 : val < -100 ? -100 : val
+    // let currY = cssTransform(imgWarp, 'translateY')
+    // 如果开始的位置大于真正移动端坐标，向上滑动
+    let val = 0
+    if (dragInfo.originY >= 0 && dragInfo.startY > touch.pageY) {
+      val = dragInfo.startY > touch.pageY ? dragInfo.originY - offsetY  : dragInfo.originY + offsetY
+    } else if(dragInfo.originY <= -80 && dragInfo.startY < touch.pageY) {
+      val = dragInfo.startY < touch.pageY ? dragInfo.originY - offsetY  : dragInfo.originY + offsetY
+    }
+    val = val <= -100 ? -100 : val >= 0 ? 0 : val
+    
+    // val = val > 0 ? 0 : val < -100 ? -100 : val
     dragInfo.translateY = cssTransform(imgWarp, 'translateY', val)
     this.setState({ dragInfo })
   }
   touchEnd = e => {
     e.stopImmediatePropagation() // 阻止事件冒泡
     e.preventDefault()
+    let { cssTransform, imgWarp } = this
+    imgWarp.style.transition = "transform .3s";
+    let currY = cssTransform(imgWarp, 'translateY')
+    let val = currY < -50 ? -100 : 10
+    cssTransform(imgWarp, 'translateY', val)
+
   }
   /**
    * @des 动画
