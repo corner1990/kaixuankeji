@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
 import './index.scss'
@@ -17,10 +18,11 @@ export default class Index extends Component {
  
   
   render () {
-    const { icon1, icon2, title1,  title2 } = this.props;
+    const { icon1, icon2, title1,  title2, click1 } = this.props;
+    console.log(click1)
     return (
       <View className='homePage'>
-        <View className='common'>
+        <View className='common' onClick={()=>{click1()}}>
           <View className='commonLeft'>
             <AtIcon value={icon1}  size='24'  ></AtIcon>
             <View className='commonLeftHade'>{title1}</View>
