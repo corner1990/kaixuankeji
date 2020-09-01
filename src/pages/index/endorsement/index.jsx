@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { View, Text, Image } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
-import { connect } from 'react-redux'
-import Tabbar from '../../components/tabbar'
-import CustomNavBar from '../../components/navbar'
+// import { connect } from 'react-redux'
+// import Tabbar from '../../../components/tabbar'
+import CustomNavBar from '../../../components/navbar'
 
-import './endorsement/index.scss'
+import './index.scss'
 
 export default class Index extends Component {
 
