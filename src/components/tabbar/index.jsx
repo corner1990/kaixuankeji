@@ -10,9 +10,9 @@ const mapState = state => state.global
 const Index = props => {
   
   const tabList = [
-    { title: '首页', iconType: 'home'},
-    { title: '发现', iconType: 'eye' },
-    { title: '我的', iconType: 'user'}
+    { title: '首页', iconType: 'home', active: [0]},
+    { title: '发现', iconType: 'eye', active: [1]},
+    { title: '我的', iconType: 'user', active: [ 2, 3]}
   ]
   const handleClick =  (value) => {
     props.setTab(value)
@@ -23,28 +23,30 @@ const Index = props => {
   const getTab = () => {
     let { tabIndex } = props
     return tabList.map((item, key) => {
-
-      if (key !== tabIndex) {
-        return (<View
-          key={key}
-          className='tab-item'
-          onClick={() => handleClick(key)} 
-        >
-          <AtIcon value={item.iconType} size='20' color='#FFF'></AtIcon>
-          {tabIndex == 3 && key ==2 ? <View  className='tab-text'>我的</View> : null}
-        </View>)
+      let title = ''
+      if (item.active.includes(tabIndex)) {
+        title = item.title
       }
-
+      // 处理返回数据
       return (<View
         key={key}
         className='tab-item'
         onClick={() => handleClick(key)} 
       >
         <AtIcon value={item.iconType} size='20' color='#FFF'></AtIcon>
-        <View  className='tab-text'>
-          { item.title }
-        </View>
+        { title  ? <View  className='tab-text'>{ title }</View> : null }
       </View>)
+
+      // return (<View
+      //   key={key}
+      //   className='tab-item'
+      //   onClick={() => handleClick(key)} 
+      // >
+      //   <AtIcon value={item.iconType} size='20' color='#FFF'></AtIcon>
+      //   <View  className='tab-text'>
+      //     { item.title }
+      //   </View>
+      // </View>)
     })
   }
     return (

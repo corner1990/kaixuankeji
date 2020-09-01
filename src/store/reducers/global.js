@@ -2,7 +2,7 @@
 import { SETTAB } from '../types'
 
 const initState = {
-  tabIndex: 2
+  tabIndex: 3, // 首页tabar下标
 }
 /**
  * @desc 全局状态

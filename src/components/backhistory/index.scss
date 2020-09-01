@@ -9,4 +9,15 @@
     height: 32px;
     width: 50px;
   }
+  .backhistory-content-wrap{
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    .at-icon-chevron-left{
+      transform: translateY(2px);
+    }
+  }
+  .cuntom-nav-title{
+    margin-left: 20px;
+  }
 }

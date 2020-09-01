@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { View, Image } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
 import './card.scss'
+import { randomRGBColor16 } from '../../../components/utils/utils'
 
 export default class Index extends Component {
   state = {
@@ -20,7 +21,10 @@ export default class Index extends Component {
     const { textTitle, textMark, month, day } = this.props.data;
     let { src } = this.state
     return (
-      <View className='found-card'>  
+      <View className='found-card'>
+        <View className='card-tag' style={{ backgroundColor: randomRGBColor16() }}>
+        <Image src='https://ipxcdn.jfshare.com/ipxmall/d26c5d1673f5b58949b9a9b128f09ae1' className='tag-img' />
+        </View>
         <Image src={src} className='found-img' />
          <View className='careHeaderCon'>
            <View className='careHeaderConL'>

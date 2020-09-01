@@ -4,7 +4,7 @@ import { AtSlider } from 'taro-ui'
 import './sub-list.scss'
 
 const SubList = props => {
-  let { list, current, setCurrent, change, setChange } = props
+  let { list, current, setCurrent, change, setChange, className } = props
   let len = list.length
   let step = 100 / len
   /**
@@ -12,7 +12,7 @@ const SubList = props => {
    */
   const createItem = () => {
     return list.map((img, key) => (
-      <SwiperItem key={key}>
+      <SwiperItem key={key} onClick={() => itemHandleClick(key)}>
             <Image 
               src={img}
               className='sub-list-item'
@@ -20,6 +20,9 @@ const SubList = props => {
             />
       </SwiperItem>
     ))
+  }
+  const itemHandleClick = index => {
+    setCurrent(index)
   }
   /**
    * @desc 处理swiper 回调
@@ -30,19 +33,19 @@ const SubList = props => {
     if (change === 'sub-list') {
       setCurrent(index)
     }
-    
-    
   }
+  /**
+   * @des 当值为change === sub-list 才会让子swiper修改父组件swiper
+   */
   const touchStart = () => {
     setChange('sub-list')
   }
   let index = current + 1
   let currPage = index < len - 4 ? index : len - 4
   
-  return (<View className='sub-list'>
+  return (<View className={['sub-list', ...className]}>
     <View className='sub-list-swiper-wrap'>
       <Swiper
-        circular
         className='sub-list-swiper'
         displayMultipleItems={4}
         current={currPage}

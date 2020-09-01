@@ -19,8 +19,10 @@ export default class Index extends Component {
       'https://mcdn.jfshare.com/image/default/C000457A5FDC4BFC89C7F372BCD31098-6-2.jpg'
     ],
     current: 0,
-    change: 'index'
+    change: 'index',
+    showslider: false
   }
+  timer = null
   componentWillMount () { }
 
   componentDidMount () { }
@@ -31,19 +33,30 @@ export default class Index extends Component {
 
   componentDidHide () { }
   /**
+   * @desc 控制是否展示slibar 和 navbar
+   */
+  setShowSlider = () => {
+    let { showslider } = this.state
+    clearTimeout(this.timer)
+    this.timer = setTimeout(() => {
+      this.setState({
+        showslider: !showslider
+      })
+    }, 100)
+  }
+  /**
    * @desc 处理item
    */
   createItem() {
     let { list } = this.state
+    let { setShowSlider } = this
     return list.map((img, key) => (
-      <SwiperItem key={key}>
+      <SwiperItem key={key} onClick={setShowSlider}>
         <ImgView img={img} />
       </SwiperItem>
     ))
   }
-  handleClick() {
-    Taro.navigateBack()
-  }
+  
   /**
    * @desc 处理swiper 回调
    * @param { object } e spier对象
@@ -56,20 +69,26 @@ export default class Index extends Component {
    * @desc 子元素更新当前下标时使用
    * @param { number } current 
    */
-  setCurrent = current => this.setState({ current })
+  setCurrent = current => this.setState({ current, change: 'index' })
   setChange = change => this.setState({ change })
   /**
    * @desc 获取子列表
    */
   getSubList() {
-    let { list, current, change } = this.state
+    let { list, current, change, showslider } = this.state
     let { setCurrent, setChange } = this
+    // 动态控制是否展示slider
+    let className = []
+    if (showslider) {
+      className.push('show')
+    }
     return <SubList
       list={list}
       current={current}
       setCurrent={setCurrent}
       change={change}
-      setChange={setChange} 
+      setChange={setChange}
+      className={className}
     />
   }
   touchStart = () => {
@@ -80,16 +99,10 @@ export default class Index extends Component {
     let { swiperChange, touchStart } = this
     return (
       <View className='list-page'>
-        <CustomBackHistory style={{ position: 'fixed' }} className='list-page-nav'>
-          <AtNavBar
-            className='list-navbar'
-            onClickLeftIcon={this.handleClick}
-            color='#fff'
-            leftIconType='chevron-left'
-          />
-        </CustomBackHistory>
+        <CustomBackHistory
+          style={{ position: 'fixed' }}
+        ></CustomBackHistory>
         <Swiper
-          circular
           className='list-swiper'
           onTouchStart={touchStart}
           current={current}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
+import { AtIcon } from 'taro-ui'
 import './index.scss'
 
 export default class Index extends Component {
@@ -46,11 +47,19 @@ export default class Index extends Component {
       navigationBarHeight
     } = this.state
     const { statusBarHeight } = wx.getSystemInfoSync()
+    let {
+      color= '#fff',
+      title = false,
+      titleStyle= {},
+      fontSize=16,
+      bgColor='#25272d'
+    } = this.props
     return (
-      <View className='custom-backhistory-wrap'>
+      <View className='custom-backhistory-wrap' style={{ backgroundColor: bgColor }}>
         <View className='white-swpace' style={{height: statusBarHeight}}></View>
-        <View className='backhistory' style={{ height: navigationBarHeight }}>
-          { this.props.children }
+        <View className='backhistory-content-wrap' style={{ height: navigationBarHeight }}>
+          <AtIcon value='chevron-left' color={color} onClick={this.clickLeft}></AtIcon>
+          { title ? <View style={{...titleStyle, fontSize, color}} className='cuntom-nav-title'>{title}</View> : null }
         </View>
       </View>
     )

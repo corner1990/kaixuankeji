@@ -1,4 +1,7 @@
 .found{
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+  padding-bottom: 280px;
   .found-search{
     border: none
   }

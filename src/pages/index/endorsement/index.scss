@@ -1,16 +1,18 @@
 page{
     background: rgb(252, 252, 252);
 }
-.my{
-    padding: 0 30px;
-    .avatar{
-      width: 140px;
-      height: 140px;
-      border-radius: 100px;
-      border: 6px solid #eee;
-    }
+.endorsement{
+  // padding: 0 30px;
+  .avatar{
+    width: 140px;
+    height: 140px;
+    border-radius: 100px;
+    border: 6px solid #eee;
   }
-.header {
+  .endorsement-conent{
+    padding: 0 24px;
+  }
+  .header {
     padding: 15px 0;
     overflow: hidden;
     .header-icon-wrap{
@@ -123,3 +125,4 @@ page{
         color: rgb(194, 0, 0);
     }
   }
+}
