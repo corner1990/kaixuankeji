@@ -11,9 +11,6 @@ export default class Index extends Component {
     list: [
       'http://mcdn.jfshare.com/image/default/B231953790204DB4AA731D8B3BF50262-6-2.jpeg',
       'http://new-img1.bazaar.net.cn/bazaar/156/881/lixvO2ezpUxY.jpeg',
-      'https://mcdn.jfshare.com/image/default/C000457A5FDC4BFC89C7F372BCD31098-6-2.jpg',
-      'http://mcdn.jfshare.com/image/default/B231953790204DB4AA731D8B3BF50262-6-2.jpeg',
-      'http://new-img1.bazaar.net.cn/bazaar/156/881/lixvO2ezpUxY.jpeg',
       'https://mcdn.jfshare.com/image/default/C000457A5FDC4BFC89C7F372BCD31098-6-2.jpg'
     ],
     current: 0,
