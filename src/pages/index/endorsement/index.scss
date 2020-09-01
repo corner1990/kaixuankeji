@@ -18,13 +18,19 @@ page{
       display: inline-block;
       margin-right: 50px;
     }
-    .header-text-wrap{
-      display: flex;
-      justify-content:space-around;
-      width: 60%;
-      
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Microsoft YaHei, FangSong;
-      text-align: right;
+    .logo-text-wrap{
+      margin-top: 20px;
+      float: left;
+      text-align: center;
+      width: 65%;
+      .line{
+        border: 1rpx rgb(189, 189, 189) solid;
+        margin: 10px 0;
+      }
+      .logo-text{
+        font-size: 24px;
+        color: rgb(189, 189, 189);
+      }
     }
     .info-num{
       // font-weight: bold;
@@ -33,6 +39,10 @@ page{
     .info-text{
       color: #ababab;
       font-size: 24px;
+    }
+    .logo{
+      width: 300px;
+      height: 40px;
     }
   }
 

@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { View, Text, Image } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
-// import { connect } from 'react-redux'
-// import Tabbar from '../../../components/tabbar'
 import CustomNavBar from '../../../components/navbar'
 
 import './index.scss'
@@ -21,6 +19,8 @@ export default class Index extends Component {
 
     render() {
         let src = 'https://ipxcdn.jfshare.com/ipxmall/avatar/1124addfcd0cec4ae8db434154d8162a.jpg'
+        let srcLogo = 'https://ipxcdn.jfshare.com/ipxmall/6ce565e43f93c837395add8da8334012'
+        
         return (
             <View className='my'>
                 <CustomNavBar title='我的' />
@@ -28,8 +28,10 @@ export default class Index extends Component {
                     <View className='header-icon-wrap'>
                         <Image src={src} className='avatar' />
                     </View>
-                    <View className='header-text-wrap'>
-
+                    <View className='logo-text-wrap'>
+                        <Image src={srcLogo} className='logo' />
+                        <View className='line'></View>
+                        <View className='logo-text'>开启时尚女性的生活态度</View>
                     </View>
                 </View>
 
@@ -84,7 +86,6 @@ export default class Index extends Component {
                     <AtIcon value='chevron-right' size='22' className='arrow' ></AtIcon>
                 </View>
 
-                {/* <Tabbar index={2} /> */}
             </View>
         )
     }

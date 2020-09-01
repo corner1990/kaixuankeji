@@ -25,6 +25,28 @@
   }
 }
 
+.clear{
+  clear: both;
+  overflow: hidden;
+}
+.logo-text-wrap{
+  width: 45%;
+  margin-bottom: 40px;
+  text-align: center;
+  float: right;
+  overflow: hidden;
+  .logo{
+    width: 229px;
+    height: 30px;
+    margin-right: 5%;
+  }
+  .line{
+    width: 100%;
+    margin-top: 10px;
+    border: 1rpx rgb(189, 189, 189) solid;
+  }
+}
+
 .order-wrap{
   background: #fff;
   box-shadow: 0 6px 10px #ddd;
