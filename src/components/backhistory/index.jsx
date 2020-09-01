@@ -38,7 +38,16 @@ export default class Index extends Component {
       navigationBarHeight
     })
   }
-  clickLeft() {
+  /**
+   * @desc 处理返回
+   */
+  clickLeft = () => {
+    // 兼容tab切换
+    let { clickLeft } = this.props
+    if(clickLeft) {
+      clickLeft()
+      return false
+    }
     Taro.navigateBack()
   }
   clickRight() {}

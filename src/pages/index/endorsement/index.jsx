@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import { View, Text, Image } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
-
+import { connect } from 'react-redux'
+import { setTab } from '../../../store/actions/global'
 import Backhistory from '../../../components/backhistory'
+
 import './index.scss'
 
-export default class Index extends Component {
+const mapState = state => state.global
+class Index extends Component {
 
     componentWillMount() { }
 
@@ -16,14 +19,16 @@ export default class Index extends Component {
     componentDidShow() { }
 
     componentDidHide() { }
-
+    clickLeft = () => {
+      this.props.setTab(2)
+    }
     render() {
         let src = 'https://ipxcdn.jfshare.com/ipxmall/avatar/1124addfcd0cec4ae8db434154d8162a.jpg'
         let srcLogo = 'https://ipxcdn.jfshare.com/ipxmall/6ce565e43f93c837395add8da8334012'
         
         return (
           <View className='endorsement'>
-            <Backhistory title='代言中心'></Backhistory>
+            <Backhistory title='代言中心' clickLeft={this.clickLeft}></Backhistory>
             <View className='endorsement-conent'>
             <View className='header'>
                 <View className='header-icon-wrap'>
@@ -91,3 +96,5 @@ export default class Index extends Component {
         )
     }
 }
+
+export default connect(mapState, { setTab })(Index)
