@@ -4,9 +4,15 @@ import { AtSlider } from 'taro-ui'
 import './sub-list.scss'
 
 const SubList = props => {
-  let { list, current, setCurrent, change, setChange, className } = props
+  let { current, setCurrent, change, setChange, className } = props
+  let list = [
+    'https://ipxcdn.jfshare.com/ipxmall/4f4e22a14e75d9d12803f16cd44c81e2',
+    'https://ipxcdn.jfshare.com/ipxmall/839af10dfe0ae2d65258c406c982ee65',
+    'https://ipxcdn.jfshare.com/ipxmall/eec20be67e97170e7fbdc6e2ef78b367'
+  ]
   let len = list.length
   let step = 100 / len
+  
   /**
    * @desc 创建子元素
    */
@@ -47,7 +53,7 @@ const SubList = props => {
     <View className='sub-list-swiper-wrap'>
       <Swiper
         className='sub-list-swiper'
-        displayMultipleItems={4}
+        displayMultipleItems={3}
         current={currPage}
         onChange={swiperChange}
         onTouchStart={touchStart}

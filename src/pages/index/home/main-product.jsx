@@ -6,7 +6,7 @@ import './main-product.scss'
 
 export default class Index extends Component {
   state = {
-    src: 'http://new-img1.bazaar.net.cn/bazaar/156/881/lixvO2ezpUxY.jpeg',
+    src: 'https://ipxcdn.jfshare.com/ipxmall/0b44041be7deff3e80561932025a1243',
     dragInfo: {
       startY: 0,
       originY: 0
@@ -180,9 +180,9 @@ export default class Index extends Component {
           <View className='product-info'>
             <View className='product-title'>
               <View>
-                <Text>Thirty is just that.</Text>
+                <Text className='main-title'>半永久纹眉</Text>
               </View>
-              <Text>三十而已</Text>
+              <Text className='sub-title'>Semi permanent eyebrow tattoo</Text>
             </View>
             <View className='product-time'>
               <View>
@@ -194,7 +194,7 @@ export default class Index extends Component {
           <View className='buy-now'>
             <Text>试读</Text>
             <Text>|</Text>
-            <Text>购买￥12.00</Text>
+            <Text>兑换</Text>
           </View>
         </View>
       </View>

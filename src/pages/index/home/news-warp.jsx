@@ -20,17 +20,28 @@ export default class Index extends Component {
 
   componentDidHide () { }
   createItem() {
-    let arr = []
-    for (let i =0; i < 10; i++) {
-      arr.push(<NewItem key={i} />)
-    }
-    return arr
+    let arr = [
+      {
+        img: 'https://ipxcdn.jfshare.com/ipxmall/524d44840865e8498b7ed502ef18b195',
+        title: '2020年8月刊'
+      },
+      {
+        img: 'https://ipxcdn.jfshare.com/ipxmall/6e023bf2bd069afbc56e66ae8d215e0b',
+        title: '2020年7月刊'
+      },
+      {
+        img: 'https://ipxcdn.jfshare.com/ipxmall/6e023bf2bd069afbc56e66ae8d215e0b',
+        title: '2020年6月刊'
+      }
+    ]
+
+    return arr.map((item, key)=> (<NewItem key={key} info={item} />))
   }
   render () {
     return (
       <View className='news-warp'>
-        <View className='news-wrap-text'>MAAAZINE</View>
-        <View className='news-wrap-text'>SHOP 全部资讯</View>
+        <View className='news-wrap-text'>RONGUAN</View>
+        <View className='news-wrap-text'>SHOP 全部杂志</View>
         <View className='news-list-wrap'>
           <View className='news-list'>
             { this.createItem() }
