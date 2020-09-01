@@ -1,0 +1,81 @@
+page{
+    background: rgb(252, 252, 252);
+}
+
+.fs-24{
+  font-size: 24px;
+}
+.red{
+  color: rgb(216, 0, 0);
+}
+
+.order-item{
+  margin: 20px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 6px 10px #ddd;
+  overflow: hidden;
+  .order-info-wrap{
+    line-height: 80px;
+    padding: 0 20px;
+    font-size: 26px;
+    border-bottom: 1px #eee solid;
+    .order-time{
+      color: #adadad;
+    }
+    .order-status{
+      float: right;
+    }
+  }
+  .product-wrap{
+    padding: 20px;
+    border-bottom: 1px #eee solid;
+    .product-img{
+      float: left;
+      width: 160px;
+      height: 160px;
+      margin-right: 30px;
+    }
+    .product-info-wrap{
+      margin-top: 10px;
+      font-size: 24px;
+      line-height: 50px;
+      .product-name{
+        font-size: 26px;
+      }
+      .product-detail{
+        color: rgb(128, 128, 128);
+      }
+    }
+  }
+  .price-wrap{
+    color: rgb(216, 0, 0);
+    .total-price{
+      float: right;
+    }
+  }
+  .operateion-wrap{
+    padding: 20px;
+    .price-text{
+      text-align: right;
+    }
+  }
+  .btn-wrap{
+    text-align: right;
+    margin: 20px 0 10px; 
+  }
+}
+
+.common-btn{
+  display: inline-block;
+  width: 180px;
+  border:none;
+  margin-left: 20px;
+}
+
+.grey-btn{
+  background: rgb(194, 194, 194);
+}
+.red-btn{
+  background: rgb(196, 0, 0);
+}
