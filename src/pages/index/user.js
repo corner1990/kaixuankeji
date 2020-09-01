@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Taro from '@tarojs/taro'
 import { View, Text, Image } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
 import { connect } from 'react-redux'
@@ -23,12 +22,13 @@ class Index extends Component {
 
   componentDidHide() { }
 
-  toEndorsement = ()=>{
+  toEndorsement = () => {
     this.props.setTab(3)
   }
 
   render() {
     let src = 'https://ipxcdn.jfshare.com/ipxmall/avatar/1124addfcd0cec4ae8db434154d8162a.jpg'
+    let srcLogo = 'https://ipxcdn.jfshare.com/ipxmall/6ce565e43f93c837395add8da8334012'
 
     return (
       <View className='my'>
@@ -50,6 +50,13 @@ class Index extends Component {
               <View className='info-num'>0.00</View>
               <View className='info-text'>钱包</View>
             </View>
+          </View>
+        </View>
+
+        <View className='clear'>
+          <View className='logo-text-wrap'>
+            <Image src={srcLogo} className='logo' />
+            <View className='line'></View>
           </View>
         </View>
 

@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { View, Swiper, SwiperItem } from '@tarojs/components'
-import { AtNavBar } from 'taro-ui'
-import Taro from '@tarojs/taro'
 import CustomBackHistory from '../../components/backhistory'
 import './index.scss'
 import ImgView from './components/img-view'
@@ -22,7 +20,6 @@ export default class Index extends Component {
     change: 'index',
     showslider: false
   }
-  timer = null
   componentWillMount () { }
 
   componentDidMount () { }
