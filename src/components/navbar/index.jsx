@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { View, Text, Image } from '@tarojs/components'
+import { AtIcon } from 'taro-ui'
 import './index.scss'
 
 export default class Index extends Component {
@@ -37,6 +38,16 @@ export default class Index extends Component {
       navigationBarHeight
     })
   }
+  /**
+   * @desc 判断是否展示返回按钮
+   */
+  getArrowLeft = () => {
+    let { clickLeft, color, iconSize=24 } = this.props
+    if (!clickLeft) return ''
+    return (<View className='clickLeft-wrap' onClick={ clickLeft } >
+      <AtIcon value='chevron-left' size={iconSize} color={color}></AtIcon>
+    </View>)
+  }
   render () {
     let {
       src,
@@ -48,6 +59,7 @@ export default class Index extends Component {
       <View className='custom-navbar-wrap'>
         <View className='white-swpace' style={{height: statusBarHeight}}></View>
         <View className='custom-navbar' style={{ height: navigationBarHeight }}>
+          { this.getArrowLeft() }
           <Text className='nav-bar-title'>{title}</Text>
           <Image src={ src } alt='logo' srcset='' className='login-img' />
         </View>

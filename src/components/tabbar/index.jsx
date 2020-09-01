@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { View } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
 import { connect } from 'react-redux'
@@ -8,15 +8,17 @@ import { setTab } from '../../store/actions/global'
 const mapState = state => state.global
 
 const Index = props => {
-  
+
+  // activelist 数字对应的是index组件中components的标
   const tabList = [
     { title: '首页', iconType: 'home', active: [0]},
-    { title: '发现', iconType: 'eye', active: [1]},
+    { title: '发现', iconType: 'eye', active: [1, 4]},
     { title: '我的', iconType: 'user', active: [ 2, 3]}
   ]
   const handleClick =  (value) => {
     props.setTab(value)
   }
+  
   /**
    * @desc 处理tab item
    */
