@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Taro from '@tarojs/taro'
 import { View, Text, Image } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
 import { connect } from 'react-redux'
@@ -24,6 +25,10 @@ class Index extends Component {
 
   toEndorsement = () => {
     this.props.setTab(3)
+  }
+
+  toOrderList = ()=>{
+    Taro.navigateTo({ url: '/pages/orderList/index'})
   }
 
   render() {
@@ -78,7 +83,7 @@ class Index extends Component {
               <AtIcon value='shopping-bag' size='24' ></AtIcon>
               <View className='info-title'>店内活动</View>
             </View>
-            <View className='icon-wrap'>
+            <View className='icon-wrap' onClick={()=>{this.toOrderList()}}>
               <AtIcon value='shopping-bag' size='24' ></AtIcon>
               <View className='info-title'>商场订单</View>
             </View>
