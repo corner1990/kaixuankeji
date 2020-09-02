@@ -11,7 +11,10 @@ export default class Index extends Component {
     list: [
       'https://ipxcdn.jfshare.com/ipxmall/deb026ca8dfb9c1f6ec9f9d66dd58dec',
       'https://ipxcdn.jfshare.com/ipxmall/ebc492769034d45538e26c3813c95243',
-      'https://ipxcdn.jfshare.com/ipxmall/2689f3603cd020087941c591d3b148eb'
+      'https://ipxcdn.jfshare.com/ipxmall/2689f3603cd020087941c591d3b148eb',
+      'https://ipxcdn.jfshare.com/ipxmall/deb026ca8dfb9c1f6ec9f9d66dd58dec',
+      'https://ipxcdn.jfshare.com/ipxmall/ebc492769034d45538e26c3813c95243',
+      'https://ipxcdn.jfshare.com/ipxmall/2689f3603cd020087941c591d3b148eb',
     ],
     current: 0,
     change: 'index',

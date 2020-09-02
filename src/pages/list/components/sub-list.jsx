@@ -8,6 +8,9 @@ const SubList = props => {
   let list = [
     'https://ipxcdn.jfshare.com/ipxmall/4f4e22a14e75d9d12803f16cd44c81e2',
     'https://ipxcdn.jfshare.com/ipxmall/839af10dfe0ae2d65258c406c982ee65',
+    'https://ipxcdn.jfshare.com/ipxmall/eec20be67e97170e7fbdc6e2ef78b367',
+    'https://ipxcdn.jfshare.com/ipxmall/4f4e22a14e75d9d12803f16cd44c81e2',
+    'https://ipxcdn.jfshare.com/ipxmall/839af10dfe0ae2d65258c406c982ee65',
     'https://ipxcdn.jfshare.com/ipxmall/eec20be67e97170e7fbdc6e2ef78b367'
   ]
   let len = list.length
