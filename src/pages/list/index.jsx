@@ -45,11 +45,11 @@ export default class Index extends Component {
    * @desc 处理item
    */
   createItem() {
-    let { list } = this.state
+    let { list, showslider } = this.state
     let { setShowSlider } = this
     return list.map((img, key) => (
       <SwiperItem key={key} onClick={setShowSlider}>
-        <ImgView img={img} />
+        <ImgView img={img} showslider={showslider} />
       </SwiperItem>
     ))
   }
@@ -86,6 +86,7 @@ export default class Index extends Component {
       change={change}
       setChange={setChange}
       className={className}
+      showslider={showslider}
     />
   }
   touchStart = () => {

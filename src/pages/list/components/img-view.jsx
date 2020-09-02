@@ -16,13 +16,13 @@ export default class Index extends Component {
   }
   render () {
     // let src = 'http://mcdn.jfshare.com/image/default/B231953790204DB4AA731D8B3BF50262-6-2.jpeg'
-    let { img } = this.props
+    let { img, showslider } = this.props
     let { style } = this.state
     return (
       <View className='img-view'>
         <Image
           src={img}
-          className='img-material'
+          className={['img-material', (showslider ? 'mb400' : '')]}
           mode='widthFix'
           style={style}
           onLoad={this.imgLoad}
