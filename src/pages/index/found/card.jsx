@@ -8,7 +8,7 @@ export default class Index extends Component {
   state = {
     // eslint-disable-next-line react/no-unused-state
     value: '',
-    src: 'http://new-img2.bazaar.net.cn/bazaar/985x695/133/607/li2V68RQFq6Y.jpg'
+    src: 'https://ipxcdn.jfshare.com/ipxmall/0b44041be7deff3e80561932025a1243'
   }
   
   onChange (value) {

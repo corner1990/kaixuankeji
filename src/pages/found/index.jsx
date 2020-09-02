@@ -22,25 +22,25 @@ export default class Index extends Component {
 
     const data = [
       {
-       textTitle: "研究院|微生态...",
-       textMark: "简单三步,助你解锁护肤新风暴",
+       textTitle: "名称",
+       textMark: "文章描述",
        month: "07",
        day: '03'
     }, {
-      textTitle: "身体要紧",
-      textMark: "简单三步,助你解锁护肤新风暴55",
+      textTitle: "名称",
+      textMark: "文章描述",
       month: "08",
       day: '08'
    },
    {
-    textTitle: "中国共产党万岁",
-    textMark: "大败美国佬",
+    textTitle: "名称",
+    textMark: "文章描述",
     month: "01",
     day: '02'
  },
  {
-  textTitle: "中国共产党万岁",
-  textMark: "大败日本人",
+  textTitle: "名称",
+  textMark: "文章描述",
   month: "10",
   day: '08'
 },];
