@@ -52,7 +52,7 @@ class Index extends Component {
               </View>
             </View>
 
-            <View className='article-list-item'>
+            <View className='article-list-item' onClick={()=>{this.toDetail()}}>
               <View className='article-time'>上午9:15</View>
               <Image src={src} className='article-img'></Image>
               <View className='content-wrap'>
@@ -63,7 +63,7 @@ class Index extends Component {
               </View>
             </View>
 
-            <View className='article-list-item'>
+            <View className='article-list-item' onClick={()=>{this.toDetail()}}>
               <View className='article-time'>上午9:15</View>
               <Image src={src} className='article-img'></Image>
               <View className='content-wrap'>
