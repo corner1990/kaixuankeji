@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { View, Text, Image, } from '@tarojs/components'
-import { AtIcon } from 'taro-ui'
+import { AtIcon, AtButton } from 'taro-ui'
 import CustomNavbar from '../../components/navbar'
 import Slogin from '../index/found-article/slogn'
 
@@ -34,6 +34,8 @@ export default class Index extends Component {
 
   render() {
 
+    let adcSrc = 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2723253439,2190704268&fm=26&gp=0.jpg'
+
     return (
       <View className='article-detail'>
         <CustomNavbar title='发现' color='#333' clickLeft={this.clickLeft}></CustomNavbar>
@@ -46,8 +48,8 @@ export default class Index extends Component {
             <Text>今天</Text>
           </View>
           <Slogin></Slogin>
-          <Image src='https://wx4.sinaimg.cn/mw690/008b8TwTgy1gic4pxxgqhj30hw0nikb7.jpg' className='content-img'></Image>
-          <Image src='https://wx4.sinaimg.cn/mw690/008b8TwTgy1gic4pxvjiwj30ht0nhdjh.jpg' className='content-img'></Image>
+          <Image src='https://wx4.sinaimg.cn/mw690/008b8TwTgy1gic4pxxgqhj30hw0nikb7.jpg' className='content-img' style={{ height: 440 }}></Image>
+          <Image src='https://wx4.sinaimg.cn/mw690/008b8TwTgy1gic4pxvjiwj30ht0nhdjh.jpg' className='content-img' style={{ height: 440 }}></Image>
           <View className='share-wrap'>
             <View className='num-wrap'>阅读1220</View>
             <View className='icon-wrap'>
@@ -56,6 +58,14 @@ export default class Index extends Component {
                 <View className='common-good'><AtIcon value='heart' size='12'></AtIcon>赞</View>
                 <View className='common-good'><AtIcon value='star' size='12'></AtIcon>在看</View>
               </View>
+            </View>
+          </View>
+
+          <View className='adv-wrap'>
+            <Image src={adcSrc} className='adv-img'></Image>
+            <View>
+              <Text className='adv-text'>独立合作品牌</Text>
+              <AtButton type='primary' size='small' className='buy-btn'>立即抢购</AtButton>
             </View>
           </View>
         </View>
