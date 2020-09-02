@@ -25,9 +25,9 @@ export default class Index extends Component {
     let { src } = this.state
     return (
       <View className='order-news'>
-        <View className='news-text'>从此以后</View>
-        <View className='news-main-text'>查阅最全面的资讯</View>
-        <AtButton type='primary' className='order-news-btn'>订阅全年资讯</AtButton>
+        <View className='news-text'>VIP</View>
+        <View className='news-main-text'>享受更自由的阅读方式</View>
+        {/* <AtButton type='primary' className='order-news-btn'>订阅全年资讯</AtButton> */}
       </View>
     )
   }

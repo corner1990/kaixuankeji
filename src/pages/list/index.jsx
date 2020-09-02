@@ -9,9 +9,12 @@ import SubList from './components/sub-list'
 export default class Index extends Component {
   state = {
     list: [
-      'http://mcdn.jfshare.com/image/default/B231953790204DB4AA731D8B3BF50262-6-2.jpeg',
-      'http://new-img1.bazaar.net.cn/bazaar/156/881/lixvO2ezpUxY.jpeg',
-      'https://mcdn.jfshare.com/image/default/C000457A5FDC4BFC89C7F372BCD31098-6-2.jpg'
+      'https://ipxcdn.jfshare.com/ipxmall/deb026ca8dfb9c1f6ec9f9d66dd58dec',
+      'https://ipxcdn.jfshare.com/ipxmall/ebc492769034d45538e26c3813c95243',
+      'https://ipxcdn.jfshare.com/ipxmall/2689f3603cd020087941c591d3b148eb',
+      'https://ipxcdn.jfshare.com/ipxmall/deb026ca8dfb9c1f6ec9f9d66dd58dec',
+      'https://ipxcdn.jfshare.com/ipxmall/ebc492769034d45538e26c3813c95243',
+      'https://ipxcdn.jfshare.com/ipxmall/2689f3603cd020087941c591d3b148eb',
     ],
     current: 0,
     change: 'index',
@@ -42,11 +45,11 @@ export default class Index extends Component {
    * @desc 处理item
    */
   createItem() {
-    let { list } = this.state
+    let { list, showslider } = this.state
     let { setShowSlider } = this
     return list.map((img, key) => (
       <SwiperItem key={key} onClick={setShowSlider}>
-        <ImgView img={img} />
+        <ImgView img={img} showslider={showslider} />
       </SwiperItem>
     ))
   }
@@ -83,6 +86,7 @@ export default class Index extends Component {
       change={change}
       setChange={setChange}
       className={className}
+      showslider={showslider}
     />
   }
   touchStart = () => {
