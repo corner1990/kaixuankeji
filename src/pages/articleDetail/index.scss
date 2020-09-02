@@ -1,0 +1,57 @@
+.red{
+  color: rgb(238, 0, 0);
+}
+
+.article-detail{
+  height: calc(100vh - 140px);
+  overflow-y: auto;
+  .content-wrap{
+    padding: 0 40px;
+  }
+  .title{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .article-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    font-size: 22px;
+    color: #666;
+    margin-top: 20px;
+    .tag{
+      display: inline-block;
+      padding: 4px 14px;
+      background: #eee;
+      color: #666;
+      margin-right: 20px;
+    }
+    text{
+      margin-right: 20px;
+    }
+  }
+  .share-wrap{
+    margin-top: 30px;
+    font-size: 24px;
+    color: rgb(187, 187, 187);
+    line-height: 60px;
+    .num-wrap{
+      border-bottom: 1px rgb(207, 207, 207) solid;
+    }
+    .at-icon{
+      color: rgb(187, 187, 187);
+      margin-right: 4px;
+    }
+    .icon-wrap{
+      display: flex;
+      justify-content: space-between;
+    }
+    .good-wrap{
+      display: flex;
+      justify-content: space-between;
+      .common-good{
+        margin-left: 20px;
+      }
+    }
+  }
+}
