@@ -11,14 +11,9 @@ export default class Index extends Component {
   componentWillMount () { 
     this.initWhiteHeight()
   }
-
-  componentDidMount () { }
-
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
+  /**
+   * @desc 处理顶部高度
+   */
   initWhiteHeight() {
     const { statusBarHeight, platform } = wx.getSystemInfoSync()
     const { top, height } = wx.getMenuButtonBoundingClientRect()

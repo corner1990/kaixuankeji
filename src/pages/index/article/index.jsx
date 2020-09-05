@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
-import { View, Text, Image } from '@tarojs/components'
-import { AtIcon } from 'taro-ui'
+import { View, Image } from '@tarojs/components'
 import { connect } from 'react-redux'
-import CustomNavBar from '../../../components/navbar'
+// import CustomNavBar from '../../../components/navbar'
 import { setTab } from '../../../store/actions/global'
 
 
@@ -36,7 +35,7 @@ class Index extends Component {
         
         return (
           <View className='article'>
-            <CustomNavBar title='发现' />
+            {/* <CustomNavBar title='发现' /> */}
             <View className='article-list-item' onClick={()=>{this.toDetail()}}>
               <View className='article-time'>上午9:15</View>
               <Image src={src} className='article-img'></Image>
