@@ -7,6 +7,9 @@ import Slogin from '../index/found-article/slogn'
 
 import './index.scss'
 
+/**
+ * @desc 文章详情页
+ */
 export default class Index extends Component {
 
   constructor() {
