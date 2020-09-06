@@ -52,7 +52,7 @@ const Index = props => {
     })
   }
     return (
-      <View className='custom-tabbar-wrap'>
+      <View className='custom-tabbar-wrap' id='custom-tabbar-wrap'>
         { getTab() }
       </View>
     )
