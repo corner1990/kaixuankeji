@@ -10,7 +10,8 @@ export default class Index extends Component {
     value: '',
     src: 'https://ipxcdn.jfshare.com/ipxmall/0b44041be7deff3e80561932025a1243'
   }
-  
+  componentDidMount () {
+  }
   onChange (value) {
     this.setState({
       // eslint-disable-next-line react/no-unused-state
@@ -18,10 +19,10 @@ export default class Index extends Component {
     })
   }
   render () {
-    const { textTitle, textMark, month, day } = this.props.data;
+    const { textTitle, textMark, month, day, index, show } = this.props;
     let { src } = this.state
     return (
-      <View className='found-card'>
+      <View className={['found-card', `found-card-${index}`, (show ? 'show' : '')]}>
         <View className='card-tag' style={{ backgroundColor: randomRGBColor16() }}>
         <Image src='https://ipxcdn.jfshare.com/ipxmall/d26c5d1673f5b58949b9a9b128f09ae1' className='tag-img' />
         </View>

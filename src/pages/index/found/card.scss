@@ -5,6 +5,13 @@
   // border: 1px #eee solid;
   height: 460px;
   background-size: 100%;
+  transition: all .5s;
+  opacity: 0;
+  transform: translateX(280px);
+  &.show{
+    transform: translateX(0);
+    opacity: 1;
+  }
   .careHeaderCon {
     display: flex;
     justify-content: space-between;
