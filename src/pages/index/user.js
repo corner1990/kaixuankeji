@@ -39,6 +39,11 @@ class Index extends Component {
     Taro.navigateTo({ url: '/pages/collection/index'})
   }
 
+  toSubscribe =()=>{
+    Taro.navigateTo({ url: '/pages/subscribe/index'})
+  }
+
+
   handleToast=()=>{
     this.setState({ isOpened:true })
   }
@@ -105,13 +110,13 @@ class Index extends Component {
         </View>
 
         <View>
-          <View className='me' onClick={()=>{this.toCollection()}}>
-            <View className='bookcase'>
+          <View className='me'>
+            <View className='bookcase' onClick={()=>{this.toCollection()}}>
               <AtIcon value='shopping-bag' size='24' ></AtIcon>
               <View>我的收藏</View>
             </View>
             <View className='line'></View>
-            <View className='magazine'>
+            <View className='magazine' onClick={()=>{this.toSubscribe()}}>
               <AtIcon value='folder' size='24' ></AtIcon>
               <View>我的订阅</View>
             </View>

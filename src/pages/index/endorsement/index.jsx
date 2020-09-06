@@ -28,7 +28,6 @@ class Index extends Component {
   }
   getHeadHeight = num=>{
     this.setState({navHeight:num})
-    console.log(num);
   }
 
   render() {
