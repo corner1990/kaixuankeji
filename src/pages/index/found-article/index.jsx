@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import CustomNavbar from '../../../components/navbar'
 import Slogin from './slogn'
 import ContentType1 from './content-type1'
+import IndexCard from './components/index-card'
 import { setTab } from '../../../store/actions/global'
 import list from './article-list'
 
@@ -24,6 +25,7 @@ class FoundArticle extends Component {
    */
   initConent = (info, key) => {
     if(info.type === 1) return <ContentType1 info={info} key={key}></ContentType1>
+    if(info.type === 2) return <IndexCard {...info} key={key} />
   }
   render() {
     let info = list[0]

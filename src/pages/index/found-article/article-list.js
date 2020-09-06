@@ -20,6 +20,18 @@ export default [
             title: '后期不变⾊，不晕⾊，不掉⾊的神奇技艺。'
           }
         ]
+      },
+      {
+        type: 2,
+        img: 'https://ipxcdn.jfshare.com/ipxmall/856f3dbe3c2c294bd9dcb9d9384ee9ea'
+      },
+      {
+        type: 2,
+        img: 'https://ipxcdn.jfshare.com/ipxmall/d13bfe921785381cd3dd024b617d88ae'
+      },
+      {
+        type: 2,
+        img: 'https://ipxcdn.jfshare.com/ipxmall/674a71a1f23238d778fe31932d38f856'
       }
     ]
   }

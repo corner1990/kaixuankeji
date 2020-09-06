@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
-import { View, Text, Image } from '@tarojs/components'
-import { AtIcon } from 'taro-ui'
+import { View, Text, Image,  } from '@tarojs/components'
+import { AtIcon, AtToast } from 'taro-ui'
 import { connect } from 'react-redux'
 import CustomNavBar from '../../components/navbar'
 import { setTab } from '../../store/actions/global'
@@ -12,6 +12,10 @@ import './user/index.scss'
 const mapState = state => state.global
 
 class Index extends Component {
+
+  state = {
+    isOpened: false,
+  }
 
   componentWillMount() { }
 
@@ -31,9 +35,19 @@ class Index extends Component {
     Taro.navigateTo({ url: '/pages/orderList/index'})
   }
 
+  toCollection =()=>{
+    Taro.navigateTo({ url: '/pages/collection/index'})
+  }
+
+  handleToast=()=>{
+    this.setState({ isOpened:true })
+  }
+
   render() {
     let src = 'https://ipxcdn.jfshare.com/ipxmall/avatar/1124addfcd0cec4ae8db434154d8162a.jpg'
     let srcLogo = 'https://ipxcdn.jfshare.com/ipxmall/6ce565e43f93c837395add8da8334012'
+
+    let {isOpened}=this.state;
 
     return (
       <View className='my'>
@@ -72,14 +86,14 @@ class Index extends Component {
           </View>
           <View className='order-centent'>
             <View className='icon-wrap'>
-              <AtIcon value='shopping-bag' size='24' ></AtIcon>
+              <AtIcon value='shopping-bag' size='24' onClick={()=>{this.handleToast()}} ></AtIcon>
               <View className='info-title'>积分兑换</View>
             </View>
             <View className='icon-wrap'>
-              <AtIcon value='shopping-bag' size='24' ></AtIcon>
+              <AtIcon value='shopping-bag' size='24' onClick={()=>{this.handleToast()}} ></AtIcon>
               <View className='info-title'>积分支付</View>
             </View>
-            <View className='icon-wrap'>
+            <View className='icon-wrap' onClick={()=>{this.handleToast()}}>
               <AtIcon value='shopping-bag' size='24' ></AtIcon>
               <View className='info-title'>店内活动</View>
             </View>
@@ -91,7 +105,7 @@ class Index extends Component {
         </View>
 
         <View>
-          <View className='me'>
+          <View className='me' onClick={()=>{this.toCollection()}}>
             <View className='bookcase'>
               <AtIcon value='shopping-bag' size='24' ></AtIcon>
               <View>我的收藏</View>
@@ -105,6 +119,8 @@ class Index extends Component {
         </View>
 
         <HomePageComponents icon1='iphone' icon2='message' title1='代言中心' title2='系统设置' click1={this.toEndorsement} />
+
+        <AtToast isOpened={isOpened} text="功能开发中，敬请期待！"></AtToast>
       </View>
     )
   }

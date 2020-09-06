@@ -1,4 +1,10 @@
 .custom-backhistory-wrap{
+  &.fixed{
+    width: 100vw;
+    position: fixed;
+    z-index: 2;
+    background: #22242a;
+  }
   .custom-backhistory{
     display: flex;
     padding: 0 15px;

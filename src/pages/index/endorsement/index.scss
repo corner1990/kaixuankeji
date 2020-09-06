@@ -1,16 +1,20 @@
 page{
-    background: rgb(252, 252, 252);
+    background: #f6f6f6;
 }
 .endorsement{
-  // padding: 0 30px;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
   .avatar{
     width: 140px;
     height: 140px;
     border-radius: 100px;
     border: 6px solid #eee;
   }
+  .content{
+    // padding-top: 130px;
+  }
   .endorsement-conent{
-    padding: 0 24px;
+    padding: 140px 24px 40px;
   }
   .header {
     padding: 15px 0;

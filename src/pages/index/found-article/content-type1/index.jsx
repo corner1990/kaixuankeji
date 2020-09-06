@@ -26,7 +26,6 @@ const ConetentType1 =  props => {
     </View>)
     })
   }
-  console.log('props', props)
   return (<View className='conetentType1-wrap'>
     <View className='contentType1-img-wrap'>
       <Image src={img} className='conentType1-img'></Image>

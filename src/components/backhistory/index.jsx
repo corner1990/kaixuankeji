@@ -6,19 +6,23 @@ import './index.scss'
 
 export default class Index extends Component {
   state = {
-    navigationBarHeight: 40
+    navigationBarHeight: 40,
   }
   componentWillMount () { 
     this.initWhiteHeight()
   }
-
-  componentDidMount () { }
-
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
+  componentDidMount(){
+    let {getHeight=()=>{}}=this.props;
+    let {
+      navigationBarHeight
+    } = this.state
+    const { statusBarHeight } = wx.getSystemInfoSync()
+    getHeight(navigationBarHeight+statusBarHeight)
+    console.log('did',navigationBarHeight+statusBarHeight)
+  }
+  /**
+   * @desc 处理顶部高度
+   */
   initWhiteHeight() {
     const { statusBarHeight, platform } = wx.getSystemInfoSync()
     const { top, height } = wx.getMenuButtonBoundingClientRect()
@@ -61,10 +65,12 @@ export default class Index extends Component {
       title = false,
       titleStyle= {},
       fontSize=16,
-      bgColor='#25272d'
+      bgColor='#25272d',
+      isFixed=false,
     } = this.props
+
     return (
-      <View className='custom-backhistory-wrap' style={{ backgroundColor: bgColor }}>
+      <View className={['custom-backhistory-wrap',(isFixed?'fixed':'')]} style={{ backgroundColor: bgColor }}>
         <View className='white-swpace' style={{height: statusBarHeight}}></View>
         <View className='backhistory-content-wrap' style={{ height: navigationBarHeight }}>
           <AtIcon value='chevron-left' color={color} onClick={this.clickLeft}></AtIcon>
