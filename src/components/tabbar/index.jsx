@@ -11,8 +11,8 @@ const Index = props => {
 
   // activelist 数字对应的是index组件中components的标
   const tabList = [
-    { title: '首页', iconType: 'home', active: [0]},
-    { title: '发现', iconType: 'eye', active: [1, 4, 5]},
+    { title: '首页', iconType: 'home', active: [0, 5]},
+    { title: '发现', iconType: 'eye', active: [1, 4]},
     { title: '我的', iconType: 'user', active: [ 2, 3]}
   ]
   const handleClick =  (value) => {

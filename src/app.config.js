@@ -1,5 +1,6 @@
 export default {
   pages: [
+    'pages/teacherInfo/index',
     'pages/index/index',
     'pages/subscribe/index',
     'pages/collection/index',

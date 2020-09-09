@@ -1,0 +1,12 @@
+.top-item{
+  width: calc(100vw / 2 - 20px);
+  padding: 20px 0;
+  box-shadow: 0 10px 10px #d5d2cd;
+  border-radius: 10px;
+  text-align: center;
+  .top-img{
+    width:  300px;
+    height: 420px;
+    // transform: translateY(-12%);
+  }
+}
