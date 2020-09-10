@@ -9,7 +9,7 @@ const Index = props =>  {
    * @desc 查看详情
    */
   const viewDetail = () => {
-    Taro.navigateTo({ url: '/pages/list/index'})
+    Taro.navigateTo({ url: '/pages/teacherInfo/index'})
   }
   let { info: {
     img

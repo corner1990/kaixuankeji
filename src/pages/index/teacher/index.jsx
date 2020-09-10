@@ -22,7 +22,7 @@ class Index extends Component {
   render() {
 
     return (
-      <View>
+      <View className='teacher-page'>
         <CustomNavBar title='首页' />
         <ImgWrap></ImgWrap>
         <TopWrap></TopWrap>

@@ -7,17 +7,18 @@ page{
     width: 100%;
   }
   .contact-wrap{
-    // display: flex;
-    // justify-content:flex-end;
+    display: flex;
+    justify-content:flex-end;
     overflow: hidden;
     margin-bottom: 40px;
-    padding:0 20px 30px;
+    padding:20px 20px 30px;
     background: #fff;
     .common-btn{
-      display: inline-block;
-      float: right;
+      // display: inline-block;
+      // float: right;
       width: 200px;
-      border-color: #666;
+      border:none;
+      background: rgb(185, 0, 0);
       margin-left: 20px;
       padding: 0 6px;
       font-size: 24px;

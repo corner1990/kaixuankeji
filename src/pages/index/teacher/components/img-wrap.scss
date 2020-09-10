@@ -1,8 +1,22 @@
 .teacher-img-wrap{
     margin: 30px 15px 0;
     padding: 40px;
-
     background-color: rgba($color: #fff, $alpha: .85);
   
+    .banner-box{
+      position: relative;
+      width: 500px;
+      height: 700px;
+      box-shadow: 4px 8px 10px 10px #e7e4de;
+      left: 50%;
+      margin-left: -250px;
+    }
+    .banner-img{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 440px;
+      height: 520px;
+    }
 
   }

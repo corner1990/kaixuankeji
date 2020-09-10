@@ -1,7 +1,7 @@
 export default {
   pages: [
-    'pages/teacherInfo/index',
     'pages/index/index',
+    'pages/teacherInfo/index',
     'pages/subscribe/index',
     'pages/collection/index',
     'pages/articleDetail/index',

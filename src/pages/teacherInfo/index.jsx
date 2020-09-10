@@ -29,15 +29,14 @@ export default class Index extends Component {
     let iconImg = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599668659666&di=b0055ecca72558b421b4ff271bf01014&imgtype=0&src=http%3A%2F%2Fdp.gtimg.cn%2Fdiscuzpic%2F0%2Fdiscuz_x5_gamebbs_qq_com_forum_201306_19_1256219xc797y90heepdbh.jpg%2F0'
     let itemImg = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599670661829&di=01d03144ae9ae613b2ec541db6bcab53&imgtype=0&src=http%3A%2F%2Fm.360buyimg.com%2Fpop%2Fjfs%2Ft25087%2F130%2F226806847%2F20299%2F9b450114%2F5b6964a3Nc3991763.jpg'
 
-
     return (
       <View className='teacher-info-wrap'>
        <Backhistory title='' clickLeft={this.clickLeft}></Backhistory>
         <Image src={teacherImg} className='teacher-img'></Image>
         <View className='contact-wrap'>
-          <AtButton size='small' className='common-btn'>拨打电话</AtButton>
-          <AtButton size='small' className='common-btn'>交换微信</AtButton>
-          <AtButton size='small' className='common-btn'>邮箱</AtButton>
+          <AtButton type='primary' size='small' className='common-btn'>拨打电话</AtButton>
+          <AtButton type='primary' size='small' className='common-btn'>交换微信</AtButton>
+          <AtButton type='primary' size='small' className='common-btn'>邮箱</AtButton>
         </View>
         <View className='person-wrap'>
           <Image src={iconImg} className='icon-img'></Image>
