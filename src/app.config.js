@@ -1,5 +1,6 @@
 export default {
   pages: [
+    'pages/productDetail/index',
     'pages/index/index',
     'pages/teacherInfo/index',
     'pages/subscribe/index',

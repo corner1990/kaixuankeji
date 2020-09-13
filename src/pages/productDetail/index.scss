@@ -1,0 +1,16 @@
+page{
+  background: #f6f6f6;
+}
+.product-info-wrap{
+  padding: 10px 20px;
+  background: #fff;
+  border-bottom: 1px solid #f6f6f6;
+  .product-title{
+    font-weight: bold;
+    line-height: 60px;
+  }
+  .product-price{
+    color: rgb(221, 26, 0);
+    line-height: 60px;
+  }
+}
