@@ -5,6 +5,9 @@ import CustomNavBar from '../../components/navbar'
 // import SearchBar from './found/searchBar'
 import Found from './found/found'
 import Article from './article' // 文章列表页
+import Seckill from './seckill' // 秒杀列表页
+import Points from './points' //积分列表页
+import Live from './live' //积分列表页
 
 
 export default class Index extends Component {
@@ -64,16 +67,16 @@ export default class Index extends Component {
             <Found></Found>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={1}>
-            <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>秒杀的内容</View>
+            <Seckill></Seckill>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={2}>
-            <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>直播的内容</View>
+            <Live></Live>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={3}>
             <Article></Article>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={4}>
-            <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>积分的内容</View>
+            <Points></Points>
           </AtTabsPane>
         </AtTabs>
       </View>

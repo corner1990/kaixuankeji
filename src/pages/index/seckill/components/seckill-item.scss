@@ -1,0 +1,47 @@
+.color-red{
+  color: rgb(212, 7, 0);
+}
+
+.seckill-item{
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0;
+  padding: 20px;
+  .content-img{
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  .product-name{
+    height: 95px;
+    line-height: 40px;
+  }
+  .buy-num{
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  .now-price{
+    color: rgb(212, 7, 0);
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  .origin-price{
+    font-size: 24px;
+    text-decoration: line-through;
+    color: rgb(136, 136, 136);
+  }
+  .buy-btn{
+    float: right;
+    display: inline-block;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    background: rgb(189, 6, 0);
+    text-align: center;
+    
+  }
+}

@@ -1,0 +1,11 @@
+page{
+    background: rgb(252, 252, 252);
+}
+.points-list-wrap{
+  max-height: calc(100vh - 380px);
+  overflow-y: auto;
+  display: flex;
+  flex-wrap:wrap;
+}
+
+
