@@ -52,8 +52,6 @@ class Home extends Component {
    */
   getNavBar = () => {
     let title = '首页'
-    let { showNavBar } = this.state
-    if(!showNavBar) return ''
     return (<CustomNavBar title={title} />)
   }
   /**

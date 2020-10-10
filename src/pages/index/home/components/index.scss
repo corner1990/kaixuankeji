@@ -8,6 +8,7 @@
 
 // 城市站点
 .CitySiteWrap{
+  background-color: $white;
   .CitySiteTitleWrap{
     @include flex(space-between, center);
     height: 84px;
