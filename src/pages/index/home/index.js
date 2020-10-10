@@ -1,19 +1,26 @@
 import React, { Component } from 'react'
 import { View } from '@tarojs/components'
 import { connect } from 'react-redux'
-import CustomNavBar from '../../components/navbar'
+import { AtTabs, AtTabsPane } from 'taro-ui'
+import CustomNavBar from '../../../components/navbar'
+import SwiperWrap from './components/swiper'
+import CitySite from './components/city-site'
 
 import './home.scss'
 
-import MainProduct from './home/main-product'
-import OrderNews from './home/order-news'
-import NewsWarp from './home/news-warp'
 
 const mapState = state => state.global
 class Home extends Component {
   state = {
-    isTouch: false,
-    showNavBar: true
+    current: 0,
+    tabList: [
+      {
+        title: '公益头条'
+      },
+      {
+        title: '公益新闻'
+      }
+    ]
   }
   componentWillMount () { }
 
@@ -49,17 +56,37 @@ class Home extends Component {
     if(!showNavBar) return ''
     return (<CustomNavBar title={title} />)
   }
-  render () {
+  /**
+   * @desc 切换tab
+   * @param {*} current 
+   */
+  tabChange = current => {
+    this.setState({
+      current
+    })
     
-    let { touchstart, setIsTouch } = this
-    let { isTouch } = this.state
-
+  }
+  render () {
+    let { current, tabList } = this.state
+    let { tabChange } = this
     return (
-      <View className={`home ${isTouch ? 'hidden': ''}`} onTouchStart={touchstart} onTouchMove={touchstart}>
+      <View className='home' >
         { this.getNavBar() }
-        <MainProduct setIsTouch={setIsTouch} />
-        <OrderNews />
-        <NewsWarp />
+        <SwiperWrap />
+        <CitySite />
+        <AtTabs
+          current={current}
+          tabList={tabList}
+          onClick={tabChange}
+          className='HomeTabs'
+        >
+          <AtTabsPane current={this.state.current} index={0} >
+            公益头条
+          </AtTabsPane>
+          <AtTabsPane current={this.state.current} index={1}>
+            公益新闻
+          </AtTabsPane>
+        </AtTabs>
       </View>
     )
   }

@@ -4,4 +4,8 @@
   &.hidden{
     overflow: hidden;
   }
+  .HomeTabs{
+    margin-top: 20px;
+    .at-tabs__header{}
+  }
 }

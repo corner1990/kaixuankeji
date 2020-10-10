@@ -75,7 +75,7 @@ export default class Index extends Component {
       })
     }, this.index * time)
     this.index += 1
-    console.log('ite', info, this.index)
+    // console.log('ite', info, this.index)
     this.timer = setTimeout(() => {
       this.index = 0
       this.isfirst = false

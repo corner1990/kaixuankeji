@@ -1,0 +1,29 @@
+@import './variable.scss';
+// 阴影
+@mixin shadow {
+  box-shadow: 0 0 24px 0px $shadow-color;
+}
+// flex
+@mixin  flex($content: space-between, $align: center) {
+  display: flex;
+  justify-content: $content;
+  align-items: $align;
+  flex-wrap: wrap;
+}
+// 隐藏文本
+@mixin textHide($line: 1) {
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp: $line; 
+}
+// margin
+@mixin mgx($content: 24px){
+  margin-left: $content;
+  margin-right: $content;
+}
+// border-radus
+@mixin  bdr($content: 16px) {
+  border-radius: $content;
+}

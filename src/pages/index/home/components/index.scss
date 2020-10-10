@@ -1,0 +1,57 @@
+@import '../../../scss/index.scss';
+.SwiperWarp{
+  .SwiperImg{
+    width: 100vw;
+    height: 680px;
+  }
+}
+
+// 城市站点
+.CitySiteWrap{
+  .CitySiteTitleWrap{
+    @include flex(space-between, center);
+    height: 84px;
+    border-bottom: 1px solid #eee;
+    margin: 40px 32px 0;
+    font-size: $font-sm;
+    .CitySiteMore{
+      @include flex(space-between, center);
+      font-size: $font-xs;
+      color: #999;
+    }
+  }
+}
+
+.CitySiteCard{
+  @include flex(flex-start, center);
+  font-size: $font-xs;
+  border-bottom: 1px solid #eee;
+  padding: 12px 32px;
+  .CardImg{
+    width: 160px;
+    height: 160px;
+    border-radius: 8px;
+  }
+  .RightBox{
+    flex: 1;
+    margin-left: 20px;
+    color: #666;
+  }
+  .CardTitle{
+    font-size: $font-sm;
+    color: #333;
+  }
+  .CardInfo{
+    margin-top: 20px;
+  }
+  .CardOperation{
+    margin-top: 20px;
+    @include flex(space-between, center);
+  }
+  .CardOperationBtn{
+    background-color: $primary;
+    color: $white;
+    border-radius: 8px;
+    padding: 8px 20px;
+  }
+}
