@@ -11,6 +11,8 @@ import './index.scss'
 const FirstNewList = () => {
   return (<View className='FirstNewListWrap'>
     <FirstNew />
+    <FirstNew />
+    <FirstNew />
   </View>)
 }
 

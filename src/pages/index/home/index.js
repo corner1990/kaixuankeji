@@ -14,7 +14,7 @@ import './home.scss'
 const mapState = state => state.global
 class Home extends Component {
   state = {
-    current: 1,
+    current: 0,
     tabList: [
       {
         title: '公益头条'
