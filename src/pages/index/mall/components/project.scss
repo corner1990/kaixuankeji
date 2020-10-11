@@ -1,0 +1,16 @@
+@import '../../../../scss/index.scss';
+.CitySiteWrap{
+  background-color: $white;
+  .CitySiteTitleWrap{
+    @include flex(space-between, center);
+    height: 84px;
+    border-bottom: 1px solid #eee;
+    margin: 20px 32px 0;
+    font-size: $font-sm;
+    .CitySiteMore{
+      @include flex(space-between, center);
+      font-size: $font-xs;
+      color: #999;
+    }
+  }
+}
