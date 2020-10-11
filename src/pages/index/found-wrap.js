@@ -4,6 +4,7 @@ import { AtTabs, AtTabsPane } from 'taro-ui'
 import CustomNavBar from '../../components/navbar'
 // import SearchBar from './found/searchBar'
 import Found from './found/found'
+import Community from './community'
 import Article from './article' // 文章列表页
 import Seckill from './seckill' // 秒杀列表页
 import Points from './points' //积分列表页
@@ -15,20 +16,17 @@ export default class Index extends Component {
     current: 0,
     tabList: [
       {
-        title: '发现'
+        title: '找宝吧'
       },
       {
-        title: '秒杀'
+        title: '找宝社区'
       },
       {
-        title: '直播'
+        title: '媒体行动'
       },
       {
-        title: '文章'
+        title: '社会行动'
       },
-      {
-        title: '积分'
-      }
     ]
   }
   componentWillMount () { }
@@ -67,16 +65,13 @@ export default class Index extends Component {
             <Found></Found>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={1}>
-            <Seckill></Seckill>
+            <Community></Community>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={2}>
             <Live></Live>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={3}>
             <Article></Article>
-          </AtTabsPane>
-          <AtTabsPane current={this.state.current} index={4}>
-            <Points></Points>
           </AtTabsPane>
         </AtTabs>
       </View>
