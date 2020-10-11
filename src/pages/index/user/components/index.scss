@@ -1,0 +1,27 @@
+
+.homePage{
+  background: #fff;
+  margin-top: 60px;
+  box-shadow: 0 6px 10px #ddd;
+  .common {
+     height: 120px;
+     width: 100%;
+     align-items: center;
+     justify-content: center;
+     display: flex;
+     .commonLeft {
+       width: 80%;
+       display: flex;
+       align-items: center;
+       height: 140px;
+       .commonLeftHade {
+         margin-left: 20px;
+       }
+     }
+  }
+  .underline {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px #eee solid;
+  }
+}

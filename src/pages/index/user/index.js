@@ -3,11 +3,11 @@ import Taro from '@tarojs/taro'
 import { View, Text, Image,  } from '@tarojs/components'
 import { AtIcon, AtToast } from 'taro-ui'
 import { connect } from 'react-redux'
-import CustomNavBar from '../../components/navbar'
-import { setTab } from '../../store/actions/global'
+import CustomNavBar from '../../../components/navbar'
+import { setTab } from '../../../store/actions/global'
 
-import HomePageComponents from './user/homePageComponents'
-import './user/index.scss'
+import HomePageComponents from './components/homePageComponents'
+import './index.scss'
 
 const mapState = state => state.global
 

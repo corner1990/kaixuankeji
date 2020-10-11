@@ -7,7 +7,7 @@ import './index.scss'
  * @desc 城市站点
  */
 const CitySiteCard = () => {
-  let src = 'https://ipxcdn.jfshare.com/ipxmall/694b422c540412a87eaeb17e65cb3a0f'
+  let src = 'https://ipxcdn.jfshare.com/ipxmall/avatar/1124addfcd0cec4ae8db434154d8162a.jpg'
   return (<View className='CitySiteCard'>
     <Image srcc={src} className='CardImg' mode='aspectFill' />
     <View className='RightBox'>
