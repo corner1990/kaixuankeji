@@ -1,0 +1,21 @@
+@import '../../../../scss/index.scss';
+.act-wrap{
+  margin:40px 20px;
+  .act-title{
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .content-img{
+    height: 300px;
+    width: 100%;
+  }
+  .data-wrap{
+    @include flex(space-between, center);
+    color: rgb(182, 182, 182);
+    font-size: 22px;
+    .CardLikeCount{
+      margin-right: 10px;
+    }
+  }
+}
