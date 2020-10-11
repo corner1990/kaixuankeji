@@ -6,6 +6,7 @@ import CustomNavBar from '../../../components/navbar'
 import SwiperWrap from './components/swiper'
 import CitySite from './components/city-site'
 import FirstNewList from './components/first-new-list'
+import Activities from './components/activities'
 
 import './home.scss'
 
@@ -13,7 +14,7 @@ import './home.scss'
 const mapState = state => state.global
 class Home extends Component {
   state = {
-    current: 0,
+    current: 1,
     tabList: [
       {
         title: '公益头条'
@@ -84,7 +85,7 @@ class Home extends Component {
               <FirstNewList />
             </AtTabsPane>
             <AtTabsPane current={this.state.current} index={1}>
-              公益新闻
+              <Activities />
             </AtTabsPane>
           </AtTabs>
         </View>

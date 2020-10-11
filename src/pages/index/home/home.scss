@@ -1,6 +1,7 @@
 @import '../../../scss/index.scss';
 .home{
-  max-height: calc(100vh - 140px);
+  max-height: 100vh;
+  box-sizing: border-box;
   overflow: auto;
   &.hidden{
     overflow: hidden;
@@ -8,7 +9,8 @@
   .HomeTabs{
     margin-top: 20px;
     background-color: $white;
-    padding: 0 32px;
+    padding: 0 32px 140px;
+    // padding-bottom: 140px;
     box-sizing: border-box;
     .at-tabs__header{}
   }
