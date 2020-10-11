@@ -1,10 +1,10 @@
 
 .homePage{
   background: #fff;
-  margin-top: 60px;
+  margin-top: 30px;
   box-shadow: 0 6px 10px #ddd;
   .common {
-     height: 120px;
+     height: 80px;
      width: 100%;
      align-items: center;
      justify-content: center;
@@ -16,6 +16,7 @@
        height: 140px;
        .commonLeftHade {
          margin-left: 20px;
+         color: #ababab;
        }
      }
   }

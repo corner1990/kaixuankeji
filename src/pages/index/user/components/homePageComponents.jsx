@@ -18,29 +18,27 @@ export default class Index extends Component {
  
   
   render () {
-    const { icon1, icon2, title1,  title2, click1 } = this.props;
-
+    const { data,click1 } = this.props;
+    console.log(data, 'data')
     return (
       <View className='homePage'>
-        <View className='common' onClick={()=>{click1()}}>
-          <View className='commonLeft'>
-            <AtIcon value={icon1}  size='24'  ></AtIcon>
-            <View className='commonLeftHade'>{title1}</View>
-          </View>
-          <View>
-            <AtIcon  value='chevron-right' size='24' color='#eee'></AtIcon>
-          </View>
-        </View>
-        <View class='underline'></View>
-        <View className='common'>
-          <View className='commonLeft'>
-            <AtIcon  value={icon2}  size='24'  ></AtIcon>
-            <View className='commonLeftHade'>{title2}</View>
-          </View>
-          <View>
-            <AtIcon  value='chevron-right'  size='24' color='#eee' ></AtIcon>
-          </View>
-        </View>
+        {
+          data.map((item) => {
+             return (
+               <View key={item.id}>
+                <View className='common' onClick={(item)=>{click1(item)}}>
+                  <View className='commonLeft'>
+                    <View className='commonLeftHade'>{item.name}</View>
+                  </View>
+                  <View>
+                    <AtIcon  value='chevron-right' size='24' color='#eee'></AtIcon>
+                  </View>
+                </View>
+                <View class='underline'></View>
+               </View>
+             )
+          })
+        }
       </View>
     )
   }

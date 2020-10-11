@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { View, Text, Image,  } from '@tarojs/components'
-import { AtIcon, AtToast } from 'taro-ui'
+import {  AtToast } from 'taro-ui'
 import { connect } from 'react-redux'
-import CustomNavBar from '../../../components/navbar'
+// import CustomNavBar from '../../../components/navbar'
 import { setTab } from '../../../store/actions/global'
 
 import HomePageComponents from './components/homePageComponents'
+// import Success from './success'
 import './index.scss'
 
 const mapState = state => state.global
@@ -15,6 +16,50 @@ class Index extends Component {
 
   state = {
     isOpened: false,
+    data: [
+      {
+        name: '我的预约',
+        id: '1',
+      },
+      {
+        name: '收货地址',
+        id: '2',
+      },
+      {
+        name: '申请成为代理人',
+        id: '3',
+      },
+      {
+        name: '加盟站点',
+        id: '4',
+      },
+      {
+        name: '商务合作',
+        id: '5',
+      }
+    ],
+    list: [
+      {
+        name: '帮助中心',
+        id: '1',
+      },
+      {
+        name: '隐私协议',
+        id: '2',
+      },
+      {
+        name: '投诉建议',
+        id: '3',
+      },
+      {
+        name: '联系我们',
+        id: '4',
+      },
+      {
+        name: '商务合作',
+        id: '5',
+      }
+    ]
   }
 
   componentWillMount() { }
@@ -27,7 +72,7 @@ class Index extends Component {
 
   componentDidHide() { }
 
-  toEndorsement = () => {
+  toEndorsement = (item) => {
     this.props.setTab(3)
   }
 
@@ -52,78 +97,42 @@ class Index extends Component {
     let src = 'https://ipxcdn.jfshare.com/ipxmall/avatar/1124addfcd0cec4ae8db434154d8162a.jpg'
     let srcLogo = 'https://ipxcdn.jfshare.com/ipxmall/6ce565e43f93c837395add8da8334012'
 
-    let {isOpened}=this.state;
+    let { isOpened,data,list }=this.state;
 
     return (
-      <View className='my'>
-        <CustomNavBar title='我的' />
+      <View className="content-user">
+        {/* <Success /> */}
         <View className='header'>
           <View className='header-icon-wrap'>
             <Image src={src} className='avatar' />
           </View>
           <View className='header-text-wrap'>
             <View>
-              <View className='info-num'>110</View>
-              <View className='info-text'>代言</View>
+              <View className='info-num'>用户名称</View>
+              <View className='info-level'>LV2</View>
             </View>
             <View>
-              <View className='info-num'>4000</View>
-              <View className='info-text'>积分</View>
+              <View className='info-num'>设置</View>
+            </View>
+          </View>
+        </View>
+       <View className="article"></View>
+       <View className='nav'>
+            <View>
+              <View className='nav-num'>5320</View>
+              <View className='nav-text'>我的积分</View>
             </View>
             <View>
-              <View className='info-num'>0.00</View>
-              <View className='info-text'>钱包</View>
+              <View className='nav-num'>218</View>
+              <View className='nav-text'>我的收藏</View>
+            </View>
+            <View>
+              <View className='nav-num'>156</View>
+              <View className='nav-text'>我的分享</View>
             </View>
           </View>
-        </View>
-
-        <View className='clear'>
-          <View className='logo-text-wrap'>
-            <Image src={srcLogo} className='logo' />
-            <View className='line'></View>
-          </View>
-        </View>
-
-        <View className='order-wrap'>
-          <View className='order-title'>
-            <Text className='my-order'>我的订单</Text>
-            <Text className='my-wallet'>我的钱包 ></Text>
-          </View>
-          <View className='order-centent'>
-            <View className='icon-wrap'>
-              <AtIcon value='shopping-bag' size='24' onClick={()=>{this.handleToast()}} ></AtIcon>
-              <View className='info-title'>积分兑换</View>
-            </View>
-            <View className='icon-wrap'>
-              <AtIcon value='shopping-bag' size='24' onClick={()=>{this.handleToast()}} ></AtIcon>
-              <View className='info-title'>积分支付</View>
-            </View>
-            <View className='icon-wrap' onClick={()=>{this.handleToast()}}>
-              <AtIcon value='shopping-bag' size='24' ></AtIcon>
-              <View className='info-title'>店内活动</View>
-            </View>
-            <View className='icon-wrap' onClick={()=>{this.toOrderList()}}>
-              <AtIcon value='shopping-bag' size='24' ></AtIcon>
-              <View className='info-title'>商场订单</View>
-            </View>
-          </View>
-        </View>
-
-        <View>
-          <View className='me'>
-            <View className='bookcase' onClick={()=>{this.toCollection()}}>
-              <AtIcon value='shopping-bag' size='24' ></AtIcon>
-              <View>我的收藏</View>
-            </View>
-            <View className='line'></View>
-            <View className='magazine' onClick={()=>{this.toSubscribe()}}>
-              <AtIcon value='folder' size='24' ></AtIcon>
-              <View>我的订阅</View>
-            </View>
-          </View>
-        </View>
-
-        <HomePageComponents icon1='iphone' icon2='message' title1='代言中心' title2='系统设置' click1={this.toEndorsement} />
+        <HomePageComponents data={data} click1={this.toEndorsement} />
+        <HomePageComponents data={list} click1={this.toEndorsement} />
 
         <AtToast isOpened={isOpened} text="功能开发中，敬请期待！"></AtToast>
       </View>
