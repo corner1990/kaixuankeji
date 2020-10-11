@@ -1,0 +1,22 @@
+@import '../../../scss/index.scss';
+.CitySiteMapWrap{
+  .CitySiteMap{
+    width: 100vw;
+    height: 90vh;
+  }
+}
+
+.CitySiteListWrap{
+  .CitySiteListHeader{
+    @include flex(space-between, center);
+    @include mgx;
+    height: 82px;
+    border-bottom: 2px solid $bg-grey;
+    font-size: $font-md; 
+  }
+  .CitySiteCard{
+    @include mgx;
+    // border-top: 2px solid $bg-grey;
+    // border-bottom: 0;
+  }
+}

@@ -19,7 +19,7 @@
   -webkit-line-clamp: $line; 
 }
 // margin
-@mixin mgx($content: 24px){
+@mixin mgx($content: 32px){
   margin-left: $content;
   margin-right: $content;
 }

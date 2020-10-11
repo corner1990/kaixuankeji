@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { View, Text, Image } from '@tarojs/components'
+import { View, Text } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
+
 import './index.scss'
 
 export default class Index extends Component {
   state = {
-    src: 'https://ipxcdn.jfshare.com/ipxmall/729580491c97b7a08d969b3d2f3e7026',
     navigationBarHeight: 40
   }
   componentWillMount () { 
@@ -45,23 +45,23 @@ export default class Index extends Component {
     let { clickLeft, color, iconSize=24 } = this.props
     if (!clickLeft) return ''
     return (<View className='clickLeft-wrap' onClick={ clickLeft } >
-      <AtIcon value='chevron-left' size={iconSize} color={color}></AtIcon>
+      <AtIcon  value='chevron-left' size={iconSize} color={color}></AtIcon>
     </View>)
   }
   render () {
     let {
-      src,
       navigationBarHeight
     } = this.state
     let { title } = this.props
     const { statusBarHeight } = wx.getSystemInfoSync()
     return (
-      <View className='custom-navbar-wrap'>
+      <View
+        className='custom-navbar-wrap'
+      >
         <View className='white-swpace' style={{height: statusBarHeight}}></View>
         <View className='custom-navbar' style={{ height: navigationBarHeight }}>
           { this.getArrowLeft() }
           <Text className='nav-bar-title'>{title}</Text>
-          <Image src={ src } alt='logo' srcset='' className='login-img' />
         </View>
       </View>
     )

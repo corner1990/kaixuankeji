@@ -1,0 +1,100 @@
+@import '../../../scss/index.scss';
+.SwiperWarp{
+  padding: 0 32px 20px;
+  height: 460px;
+  background-color: $white;
+
+  swiper{
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .SwiperImg{
+    // border-radius: 16px;
+    width: 100%;
+    height: 460px;
+  }
+}
+
+.SiteInfoWrap{
+  background-color: $white;
+  padding: 20px 32px;
+  margin-top: 20px;
+  line-height: 48px;
+  font-size: $font-xs;
+  color: $black65;
+  .SiteInfoTitle{
+    color: $black85;
+    font-size: $font-sm;
+  }
+  .SiteInfoLine{
+    @include flex(space-between, center);
+  }
+  .CardOperation{
+    @include flex(space-between, center);
+  }
+  .CardOperationBtn{
+    background-color: $primary;
+    color: $white;
+    border-radius: 8px;
+    padding: 8px 30px;
+  }
+}
+
+.SiteImgsWrap{
+  background-color: $white;
+  padding: 20px 32px;
+  margin-top: 20px;
+  .SiteImgsTitle{
+    color: $black85;
+    font-size: $font-sm;
+  }
+  .SiteImgs{
+    // @include mgx;
+    margin-top: 10px;
+  }
+  .SiteImg{
+    margin-top: 10px;
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.BookSiteWrap{
+  padding: 0 32px 32px;
+  text-align: left;
+  .BookSiteTitle{
+    color: $black;
+    font-size: $font-md;
+    line-height: 84px;
+  }
+  .line{
+    @include flex(flex-start, center);
+    height: 84px;
+  }
+  .label{
+    min-width: 120px;
+    text-align: left;
+  }
+  Input{
+    border-radius: 4px;
+    border: 2px solid $bg-grey;
+    font-size: $font-sm;
+    padding: 0 10px;
+    height: 64px;
+    flex: 1;
+  }
+  .BtnWrap{
+    @include flex(flex-end, center);
+    margin-top: 32px;
+    .at-button{
+      height: 64px;
+      line-height: 64px;
+      width: 160px;
+      margin: 0;
+      &:last-child{
+        margin-left: 32px;
+      }
+    }
+  }
+}

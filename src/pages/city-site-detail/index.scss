@@ -1,0 +1,10 @@
+@import '../../scss/index.scss';
+.CitySiteDetail{
+  background-color: $bg-grey;
+  height: 100vh;
+  overflow: auto;
+  box-sizing: border-box;
+  .custom-navbar-wrap{
+    background-color: $white;
+  }
+}
