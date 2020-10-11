@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import 'taro-ui/dist/style/index.scss' // 全局引入一次即可
 import createStore from './store'
 import './app.scss'
+import './scss/taro-ui.css'
 
 const store = createStore()
 class App extends Component {

@@ -5,6 +5,7 @@ import { AtTabs, AtTabsPane } from 'taro-ui'
 import CustomNavBar from '../../../components/navbar'
 import SwiperWrap from './components/swiper'
 import CitySite from './components/city-site'
+import FirstNewList from './components/first-new-list'
 
 import './home.scss'
 
@@ -72,19 +73,21 @@ class Home extends Component {
         { this.getNavBar() }
         <SwiperWrap />
         <CitySite />
-        <AtTabs
-          current={current}
-          tabList={tabList}
-          onClick={tabChange}
-          className='HomeTabs'
-        >
-          <AtTabsPane current={this.state.current} index={0} >
-            公益头条
-          </AtTabsPane>
-          <AtTabsPane current={this.state.current} index={1}>
-            公益新闻
-          </AtTabsPane>
-        </AtTabs>
+        <View className='HomeTabs'>
+          <AtTabs
+            current={current}
+            tabList={tabList}
+            onClick={tabChange}
+            
+          >
+            <AtTabsPane current={this.state.current} index={0} >
+              <FirstNewList />
+            </AtTabsPane>
+            <AtTabsPane current={this.state.current} index={1}>
+              公益新闻
+            </AtTabsPane>
+          </AtTabs>
+        </View>
       </View>
     )
   }
