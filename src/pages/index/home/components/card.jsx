@@ -1,7 +1,12 @@
 import React from 'react'
 import { View, Image } from '@tarojs/components'
 // import { AtButton } from 'taro-ui'
+import Taro from '@tarojs/taro'
 import './index.scss'
+
+const toDetail = () => {
+  Taro.navigateTo({ url: '/pages/city-site-detail/index' })
+}
 
 /**
  * @desc 城市站点
@@ -15,7 +20,7 @@ const CitySiteCard = () => {
       <View className='CardInfo'>地点：北京市东城区冬直门东冠英胡同26号</View>
       <View className='CardOperation'>
         <View className='CardOperationText'>020-1234567</View>
-        <View className='CardOperationBtn'>预约</View>
+        <View className='CardOperationBtn' onClick={()=>{toDetail()}}>预约</View>
       </View>
     </View>
   </View>)

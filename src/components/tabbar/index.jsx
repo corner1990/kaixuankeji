@@ -13,7 +13,7 @@ const Index = props => {
   const tabList = [
     { title: '首页', iconType: 'home', active: [0, ]},
     { title: '公益活动', iconType: 'eye', active: [1, ]},
-    { title: '积分商城', iconType: 'eye', active: [2, ]},
+    { title: '积分商城', iconType: 'shopping-bag', active: [2, ]},
     { title: '我的', iconType: 'user', active: [ 3, ]}
   ]
   const handleClick =  (value) => {
