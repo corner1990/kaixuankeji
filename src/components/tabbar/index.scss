@@ -1,3 +1,4 @@
+@import '../../scss/index.scss';
 .custom-tabbar-wrap{
   position: fixed;
   bottom: 0;
@@ -8,9 +9,10 @@
   display: flex;
   justify-content: space-between;
   align-content: center;
-  background-color: #24242a;
-  color: #fff;
-  border-radius: 40px 40px 0 0;
+  background-color: $white;
+  color: $black85;
+  border-top: 2px solid $bg-grey;
+  // border-radius: 40px 40px 0 0;
   // .custom-navbar{
   //   display: flex;
   //   align-items: center;

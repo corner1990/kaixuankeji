@@ -5,15 +5,14 @@ import CustomNavBar from '../../components/navbar'
 // import SearchBar from './found/searchBar'
 import Found from './found/found'
 import Community from './community'
-import Article from './article' // 文章列表页
-import Seckill from './seckill' // 秒杀列表页
-import Points from './points' //积分列表页
+// import Article from './article' // 文章列表页
 import Live from './live' //积分列表页
+import './index.scss'
 
 
 export default class Index extends Component {
   state= {
-    current: 0,
+    current: 3,
     tabList: [
       {
         title: '找宝吧'
@@ -71,7 +70,7 @@ export default class Index extends Component {
             <Live></Live>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={3}>
-            <Article></Article>
+            <Community></Community>
           </AtTabsPane>
         </AtTabs>
       </View>

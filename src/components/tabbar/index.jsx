@@ -24,20 +24,15 @@ const Index = props => {
    * @desc 处理tab item
    */
   const getTab = () => {
-    let { tabIndex } = props
     return tabList.map((item, key) => {
-      let title = ''
-      if (item.active.includes(tabIndex)) {
-        title = item.title
-      }
       // 处理返回数据
       return (<View
         key={key}
         className='tab-item'
         onClick={() => handleClick(key)} 
       >
-        <AtIcon value={item.iconType} size='20' color='#FFF'></AtIcon>
-        { title  ? <View  className='tab-text'>{ title }</View> : null }
+        <AtIcon value={item.iconType} size='20' color='rgba(7,7,7,0.85)'></AtIcon>
+        <View  className='tab-text'>{ item.title }</View>
       </View>)
 
       // return (<View

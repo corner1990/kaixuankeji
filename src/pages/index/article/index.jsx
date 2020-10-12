@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
-import { View, Image } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import { connect } from 'react-redux'
 import ArticleItem from './components/article-item'
 import { setTab } from '../../../store/actions/global'
