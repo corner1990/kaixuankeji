@@ -1,6 +1,7 @@
 import React from 'react'
 import { View } from '@tarojs/components'
 import { AtActionSheet } from 'taro-ui'
+import Taro from '@tarojs/taro'
 import CustomNavBar from '../../components/navbar'
 import Swiper from './components/swiper'
 import SiteInfo from './components/site-info'
@@ -12,7 +13,9 @@ import './index.scss'
  * @desc 城市工作站
  */
 class CitySitePage extends React.Component{
-  backHistory = () => {}
+  backHistory = () => {
+    Taro.navigateBack()
+  }
   render() {
     return (<View className='CitySiteDetail'>
       <CustomNavBar

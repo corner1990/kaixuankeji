@@ -1,0 +1,14 @@
+.home{
+  max-height: 100vh;
+  box-sizing: border-box;
+  overflow: auto;
+  &.hidden{
+    overflow: hidden;
+  }
+  .act-item-wrap{
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}

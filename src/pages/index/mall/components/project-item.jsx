@@ -1,12 +1,7 @@
 import React from 'react'
 import { View, Image } from '@tarojs/components'
 // import { AtButton } from 'taro-ui'
-import Taro from '@tarojs/taro'
-import './index.scss'
-
-const toDetail = () => {
-  Taro.navigateTo({ url: '/pages/city-site-detail/index' })
-}
+import './project-item.scss'
 
 /**
  * @desc 城市站点
@@ -18,9 +13,14 @@ const CitySiteCard = () => {
     <View className='RightBox'>
       <View className='CardTitle'>站点名称</View>
       <View className='CardInfo'>地点：北京市东城区冬直门东冠英胡同26号</View>
+      <View className='progressWrap'>
+        <View className='progress'>
+          <View className='show' style={{width:'80%'}}></View>
+        </View>
+        80/100
+      </View>
       <View className='CardOperation'>
-        <View className='CardOperationText'>020-1234567</View>
-        <View className='CardOperationBtn' onClick={()=>{toDetail()}}>预约</View>
+        <View className='CardOperationBtn'>查看</View>
       </View>
     </View>
   </View>)
