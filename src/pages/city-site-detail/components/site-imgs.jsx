@@ -5,9 +5,9 @@ import './index.scss'
 class SiteImgs extends Component {
   state = {
     imgs: [
-      'https://ipxcdn.jfshare.com/ipxmall/694b422c540412a87eaeb17e65cb3a0f',
-      'https://ipxcdn.jfshare.com/system/admin/5f62116f9dc0713ab1ec3795614b38a8.png',
-      'https://ipxcdn.jfshare.com/ipxmall/9a15d6c8175c847bae90b3dadad49275'
+      'https://ipxcdn.jfshare.com/ipxmall/858e478c4a334fc2d06fbfb5e2ccd474',
+      'https://ipxcdn.jfshare.com/ipxmall/858e478c4a334fc2d06fbfb5e2ccd474',
+      'https://ipxcdn.jfshare.com/ipxmall/858e478c4a334fc2d06fbfb5e2ccd474',
     ]
   }
   /**

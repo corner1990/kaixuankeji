@@ -50,8 +50,11 @@ export default class Index extends Component {
             {/* <Text className='red'>技术分享</Text> */}
             <Text>今天</Text>
           </View>
+
+          <View style={{textAlign:"center"}}>
+            <Image src='https://ipxcdn.jfshare.com/ipxmall/aa139104a1d03a2526938a1daa000f90' className='content-img' style={{ height: 3000, width:'100%' }}></Image>
+          </View>
           
-          <Image src='https://ipxcdn.jfshare.com/ipxmall/aa139104a1d03a2526938a1daa000f90' className='content-img' style={{ height: 3000 }}></Image>
 
           <View className='share-wrap'>
             <View className='num-wrap'>阅读1220</View>

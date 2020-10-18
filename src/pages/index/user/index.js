@@ -109,6 +109,7 @@ class Index extends Component {
   render() {
     let src = 'https://ipxcdn.jfshare.com/ipxmall/eb734bde185fe94789288fc7b69365a0'
     let srcLogo = 'https://ipxcdn.jfshare.com/ipxmall/6ce565e43f93c837395add8da8334012'
+    let moneySrc = 'https://ipxcdn.jfshare.com/ipxmall/1dd7818897b73fc9603813ac853d1754'
 
     let { isOpened, data,list }=this.state;
 
@@ -143,6 +144,11 @@ class Index extends Component {
             <View onClick={this.toMail}>积分商城</View>
           </View> */}
         </View>
+
+        <View style={{textAlign:'center', padding:'0 10px'}}>
+          <Image src={moneySrc} style={{width:'100%', height:'50px', }} />
+        </View>
+
         <View className='UserLinkItem'>
           <HomePageComponents data={data}  />
           <HomePageComponents data={list} />

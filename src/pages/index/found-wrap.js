@@ -18,20 +18,23 @@ export default class Index extends Component {
   state= {
     current: 0,
     tabList: [
+      // {
+      //   title: '关于虹膜'
+      // },
+      // {
+      //   title: '公益头条'
+      // },
+      // {
+      //   title: '公益活动'
+      // },
       {
-        title: '关于虹膜'
-      },
-      {
-        title: '公益头条'
-      },
-      {
-        title: '公益活动'
-      },
-      {
-        title: '工作站'
+        title: '找宝吧'
       },
       {
         title: '找宝社区'
+      },
+      {
+        title: '工作站'
       },
       {
         title: '媒体行动'
@@ -74,27 +77,41 @@ export default class Index extends Component {
           tabList={tabList}
           onClick={tabChange}
         >
-          <AtTabsPane current={this.state.current} index={0} >
+          {/* 关于虹膜 */}
+          {/* <AtTabsPane current={this.state.current} index={0} >
             <AboutTab></AboutTab>
-          </AtTabsPane>
-          <AtTabsPane current={this.state.current} index={1}>
+          </AtTabsPane> */}
+
+          {/* 公益头条 */}
+          {/* <AtTabsPane current={this.state.current} index={1}>
             <Article></Article>
-          </AtTabsPane>
-          <AtTabsPane current={this.state.current} index={2}>
+          </AtTabsPane> */}
+
+          {/* 公益活动 */}
+          {/* <AtTabsPane current={this.state.current} index={2}>
             <Activity></Activity>
-          </AtTabsPane>
-          <AtTabsPane current={this.state.current} index={3}>
-            <Community></Community>
-          </AtTabsPane>
-          <AtTabsPane current={this.state.current} index={4}>
+          </AtTabsPane> */}
+
+          <AtTabsPane current={this.state.current} index={0}>
             <FindTab></FindTab>
           </AtTabsPane>
-          <AtTabsPane current={this.state.current} index={5}>
+
+          <AtTabsPane current={this.state.current} index={1}>
+            <FindTab></FindTab>
+          </AtTabsPane>
+
+          <AtTabsPane current={this.state.current} index={2}>
+            <Community></Community>
+          </AtTabsPane>
+
+          <AtTabsPane current={this.state.current} index={3}>
             <MediaActivity></MediaActivity>
           </AtTabsPane>
-          <AtTabsPane current={this.state.current} index={6}>
+
+          <AtTabsPane current={this.state.current} index={4}>
             <Article></Article>
           </AtTabsPane>
+
         </AtTabs>
       </View>
     )
