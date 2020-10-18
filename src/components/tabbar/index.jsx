@@ -11,10 +11,10 @@ const Index = props => {
   // activelist 数字对应的是index组件中components的标
   let { tabIndex } = props
   const tabList = [
-    { title: '首页', iconType: 'home', active: 0},
-    { title: '公益活动', iconType: 'eye', active: 1},
+    { title: '首页', iconType: 'home', active: [0]},
+    { title: '公益活动', iconType: 'eye', active: [1]},
     // { title: '积分商城', iconType: 'shopping-bag', active: [2, ]},
-    { title: '我的', iconType: 'user', active: 3}
+    { title: '我的', iconType: 'user', active: [3]}
   ]
   const handleClick =  (value) => {
     props.setTab(value)
@@ -26,7 +26,7 @@ const Index = props => {
   const getTab = () => {
     
     return tabList.map((item, key) => {
-      let color = tabIndex === item.active ? '#00b799' : 'rgba(7,7,7,0.85)'
+      let color = item.active.includes(tabIndex) ? '#00b799' : 'rgba(7,7,7,0.85)'
       // 处理返回数据
       return (<View
         key={key}

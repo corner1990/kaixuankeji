@@ -25,6 +25,7 @@ class Index extends Component {
       {
         name: '收货地址',
         id: '2',
+        click: () => Taro.navigateTo({url: '/pages/address/index'})
       },
       {
         name: '在线加盟',
