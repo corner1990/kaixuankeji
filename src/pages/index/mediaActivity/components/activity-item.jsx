@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, Image } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 
-import './article-item.scss'
+import './activity-item.scss'
 
 
 export default class Index extends Component {
@@ -15,18 +15,18 @@ export default class Index extends Component {
 
   componentDidShow() { }
 
-  componentDidHide() { } 
+  componentDidHide() { }
 
   toDetail = () => {
     Taro.navigateTo({ url: '/pages/articleDetail/index' })
   }
 
   render() {
-    let src = 'https://ipxcdn.jfshare.com/ipxmall/bb4ac8798db235512787bf0d07e9f3f9'
-    let src2 = 'https://ipxcdn.jfshare.com/ipxmall/ec7eb85a6751ca8bb4224356ff0cc901'
+    let src = 'https://ipxcdn.jfshare.com/ipxmall/ef2ecf65edec3dbe730eb66e526fc680'
+    let src2 = 'https://ipxcdn.jfshare.com/ipxmall/072c61ee9a17fdddd4c8c2f288009aff'
 
     return (
-      <View className='article-list-item' onClick={() => { this.toDetail() }}>
+      <View className='mediaArticle-list-item' onClick={() => { this.toDetail() }}>
         <View className='article-time'>上午9:15</View>
         <Image src={src} className='article-img'></Image>
         <View className='content-wrap'>

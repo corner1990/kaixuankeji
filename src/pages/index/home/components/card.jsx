@@ -14,7 +14,7 @@ const toDetail = () => {
  * @desc 城市站点
  */
 const CitySiteCard = () => {
-  let src = 'https://ipxcdn.jfshare.com/ipxmall/avatar/1124addfcd0cec4ae8db434154d8162a.jpg'
+  let src = 'https://ipxcdn.jfshare.com/ipxmall/65dc1d11bf5325caa5cf5692d29c472d'
   return (<View className='CitySiteCard' onClick={()=>{toDetail()}}>
     <Image src={src} className='CardImg' mode='aspectFill' />
     <View className='RightBox'>

@@ -132,7 +132,7 @@ class Index extends Component {
             <View className='nav-text'>积分</View>
           </View>
           <View>
-            <View onClick={this.toMail}>积分商城</View>
+            <View onClick={()=>{this.toMail}}>积分商城</View>
           </View>
         </View>
         <HomePageComponents data={data} click1={this.toEndorsement} />

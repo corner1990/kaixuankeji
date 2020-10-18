@@ -3,10 +3,12 @@ import { View } from '@tarojs/components'
 import { AtTabs, AtTabsPane } from 'taro-ui'
 import CustomNavBar from '../../components/navbar'
 // import SearchBar from './found/searchBar'
-import Found from './found/found'
-import Community from './community'
+import Found from './found/found' // 朋友圈样式
+import Community from './community' 
 import Article from './article' // 文章列表页
 import Activity from './activity' // 公益活动
+import MediaActivity from './mediaActivity' // 公益活动
+import AboutTab from './aboutTab' // 关于虹膜
 import Live from './live' //积分列表页
 import './index.scss'
 
@@ -72,7 +74,7 @@ export default class Index extends Component {
           onClick={tabChange}
         >
           <AtTabsPane current={this.state.current} index={0} >
-            <Found></Found>
+            <AboutTab></AboutTab>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={1}>
             <Article></Article>
@@ -87,7 +89,7 @@ export default class Index extends Component {
             <Live></Live>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={5}>
-            <Article></Article>
+            <MediaActivity></MediaActivity>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={6}>
             <Article></Article>

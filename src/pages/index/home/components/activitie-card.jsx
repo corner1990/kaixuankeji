@@ -7,7 +7,7 @@ import './index.scss'
  * @desc 城市站点
  */
 const ActivitieCard = () => {
-  let src = 'https://ipxcdn.jfshare.com/ipxmall/avatar/1124addfcd0cec4ae8db434154d8162a.jpg'
+  let src = 'https://ipxcdn.jfshare.com/ipxmall/3ee79c2fbb215b8b91f06a640aadffb1'
   return (<View className='ActivitieCard'>
     <Image src={src} className='CardImg' mode='aspectFill' />
     <View className='CardTitle'>活动名称</View>

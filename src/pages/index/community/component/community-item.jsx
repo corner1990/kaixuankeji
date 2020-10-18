@@ -8,7 +8,7 @@ export default class Index extends Component {
   state = {
     // eslint-disable-next-line react/no-unused-state
     value: '',
-    src: 'https://ipxcdn.jfshare.com/ipxmall/avatar/1124addfcd0cec4ae8db434154d8162a.jpg'
+    src: 'https://ipxcdn.jfshare.com/ipxmall/858e478c4a334fc2d06fbfb5e2ccd474'
   }
   componentDidMount () {
   }

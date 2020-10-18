@@ -26,7 +26,7 @@ class SwiperWarp extends Component {
     })
   }
   render () {
-    return (<View className='SwiperWarp'>
+    return (<View className='MallSwiperWarp'>
       <Swiper>
         { this.getItem() }
       </Swiper>

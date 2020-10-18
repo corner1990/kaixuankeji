@@ -7,7 +7,7 @@ import './index.scss'
  * @desc 城市站点
  */
 const FirstNews = () => {
-  let src = 'https://ipxcdn.jfshare.com/ipxmall/694b422c540412a87eaeb17e65cb3a0f'
+  let src = 'https://ipxcdn.jfshare.com/ipxmall/359890a8d89c2261cedcf04b2820918c'
   return (<View className='FirstNewsWrap'>
     <View className='RightBox'>
       <View className='CardInfo'>你说本座一言堂，本座还真是不敢当！只不过为了司马副院长在桑梓大洲行事方便，副院长身份才一直秘而不宣。当然了，身份足够的人都知道这件事</View>
