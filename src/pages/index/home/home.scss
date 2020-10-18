@@ -6,6 +6,11 @@
   &.hidden{
     overflow: hidden;
   }
+  .homeSipwerWrap{
+    margin: 0 24px;
+    border-radius: 18px;
+    overflow: hidden;
+  }
   .HomeTabs{
     margin-top: 20px;
     background-color: $white;
@@ -13,5 +18,16 @@
     // padding-bottom: 140px;
     box-sizing: border-box;
     .at-tabs__header{}
+    .at-tabs__item{
+      font-size: $font-md;
+    }
+  }
+  .LocationWrap{
+    margin-top: 24px;
+    .LoactionImg{
+      width: 24px;
+      height: 34px;
+      vertical-align: middle;
+    }
   }
 }

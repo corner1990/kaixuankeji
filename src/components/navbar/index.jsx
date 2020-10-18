@@ -42,7 +42,10 @@ export default class Index extends Component {
    * @desc 判断是否展示返回按钮
    */
   getArrowLeft = () => {
-    let { clickLeft, color, iconSize=24 } = this.props
+    let { clickLeft, color, iconSize=24, LeftComponent = null } = this.props
+    if(LeftComponent) {
+      return LeftComponent
+    }
     if (!clickLeft) return ''
     return (<View className='clickLeft-wrap' onClick={ clickLeft } >
       <AtIcon  value='chevron-left' size={iconSize} color={color}></AtIcon>

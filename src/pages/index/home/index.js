@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View } from '@tarojs/components'
+import { View, Image } from '@tarojs/components'
 import { connect } from 'react-redux'
 import { AtTabs, AtTabsPane } from 'taro-ui'
 import CustomNavBar from '../../../components/navbar'
@@ -54,7 +54,11 @@ class Home extends Component {
    */
   getNavBar = () => {
     let title = '首页'
-    return (<CustomNavBar title={title} />)
+    const Left = (<View className='LocationWrap'>
+      <Image className='LoactionImg' src='https://ipxcdn.jfshare.com/ipxmall/ed806136b058d8553ac56a605702d96c' />
+      广州
+    </View>)
+    return (<CustomNavBar title={title} LeftComponent={Left}/>)
   }
   /**
    * @desc 切换tab
@@ -72,7 +76,9 @@ class Home extends Component {
     return (
       <View className='home' >
         { this.getNavBar() }
-        <SwiperWrap />
+        <View className='homeSipwerWrap'>
+          <SwiperWrap />
+        </View>
         <CitySite />
         <View className='HomeTabs'>
           <AtTabs

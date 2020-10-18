@@ -15,6 +15,9 @@
     border-bottom: 1px solid #eee;
     margin: 20px 32px 0;
     font-size: $font-sm;
+    .CitySiteTitle{
+      font-size: $font-md;
+    }
     .CitySiteMore{
       @include flex(space-between, center);
       font-size: $font-xs;
@@ -83,6 +86,7 @@
   }
   .CardInfo{
     @include textHide(3);
+    font-size: $font-sm;
   }
   .CardLikeCount{
     margin-right: 20px;
