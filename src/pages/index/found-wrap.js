@@ -9,13 +9,14 @@ import Article from './article' // 文章列表页
 import Activity from './activity' // 公益活动
 import MediaActivity from './mediaActivity' // 公益活动
 import AboutTab from './aboutTab' // 关于虹膜
+import FindTab from './findTab' // 找宝社区
 import Live from './live' //积分列表页
 import './index.scss'
 
 
 export default class Index extends Component {
   state= {
-    current: 3,
+    current: 0,
     tabList: [
       {
         title: '关于虹膜'
@@ -86,7 +87,7 @@ export default class Index extends Component {
             <Community></Community>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={4}>
-            <Live></Live>
+            <FindTab></FindTab>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={5}>
             <MediaActivity></MediaActivity>

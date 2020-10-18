@@ -16,10 +16,8 @@ export default class Index extends Component {
     let { src } = this.state
     return (
       <View className='find-item-wrap'>
-        <View className='item-title'>深圳福永街道社区工作在进行</View>
-        <Image src={src} className='item-img'></Image>   
-
-        
+        <View className='item-title'>济南工作站</View>
+        <Image src={src} className='item-img'></Image> 
       </View>
     )
   }
