@@ -20,6 +20,7 @@ class Index extends Component {
       {
         name: '我的预约',
         id: '1',
+        click: () => Taro.navigateTo({url: '/pages/my-book/index'})
       },
       {
         name: '收货地址',
@@ -79,11 +80,15 @@ class Index extends Component {
   toOrderList = ()=>{
     Taro.navigateTo({ url: '/pages/orderList/index'})
   }
-
+  /**
+   * @desc 跳转收藏
+   */
   toCollection =()=>{
     Taro.navigateTo({ url: '/pages/collection/index'})
   }
-
+  /**
+   * @desc 跳转定于
+   */
   toSubscribe =()=>{
     Taro.navigateTo({ url: '/pages/subscribe/index'})
   }
@@ -97,15 +102,18 @@ class Index extends Component {
   toMail = (item) => {
     this.props.setTab(2)
   }
-
+  userClick = e => {
+    console.log('123 userClick')
+    e.stopPropagation()
+  }
   render() {
     let src = 'https://ipxcdn.jfshare.com/ipxmall/eb734bde185fe94789288fc7b69365a0'
     let srcLogo = 'https://ipxcdn.jfshare.com/ipxmall/6ce565e43f93c837395add8da8334012'
 
-    let { isOpened,data,list }=this.state;
+    let { isOpened, data,list }=this.state;
 
     return (
-      <View className="content-user">
+      <View className="content-user" onClick={this.userClick}>
         {/* <Success /> */}
         <View className='header'>
           <View className='header-icon-wrap'>
@@ -131,12 +139,14 @@ class Index extends Component {
             <View className='nav-num'>218</View>
             <View className='nav-text'>积分</View>
           </View>
-          <View>
-            <View onClick={()=>{this.toMail}}>积分商城</View>
-          </View>
+          {/* <View>
+            <View onClick={this.toMail}>积分商城</View>
+          </View> */}
         </View>
-        <HomePageComponents data={data} click1={this.toEndorsement} />
-        <HomePageComponents data={list} click1={this.toEndorsement} />
+        <View className='UserLinkItem'>
+          <HomePageComponents data={data}  />
+          <HomePageComponents data={list} />
+        </View>
 
         <AtToast isOpened={isOpened} text="功能开发中，敬请期待！"></AtToast>
       </View>
