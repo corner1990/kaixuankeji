@@ -6,6 +6,7 @@ import CustomNavBar from '../../components/navbar'
 import Found from './found/found'
 import Community from './community'
 import Article from './article' // 文章列表页
+import Activity from './activity' // 公益活动
 import Live from './live' //积分列表页
 import './index.scss'
 
@@ -74,12 +75,21 @@ export default class Index extends Component {
             <Found></Found>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={1}>
-            <Community></Community>
+            <Article></Article>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={2}>
-            <Live></Live>
+            <Activity></Activity>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={3}>
+            <Community></Community>
+          </AtTabsPane>
+          <AtTabsPane current={this.state.current} index={4}>
+            <Live></Live>
+          </AtTabsPane>
+          <AtTabsPane current={this.state.current} index={5}>
+            <Article></Article>
+          </AtTabsPane>
+          <AtTabsPane current={this.state.current} index={6}>
             <Article></Article>
           </AtTabsPane>
         </AtTabs>

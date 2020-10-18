@@ -5,9 +5,8 @@ import './index.scss'
 class SwiperWarp extends Component {
   state = {
     imgs: [
-      'https://ipxcdn.jfshare.com/ipxmall/694b422c540412a87eaeb17e65cb3a0f',
-      'https://ipxcdn.jfshare.com/system/admin/5f62116f9dc0713ab1ec3795614b38a8.png',
-      'https://ipxcdn.jfshare.com/ipxmall/9a15d6c8175c847bae90b3dadad49275'
+      'https://ipxcdn.jfshare.com/ipxmall/1a68424649873adeb7bea5b84b387988',
+      'https://ipxcdn.jfshare.com/ipxmall/fd6c4004a7f58d8cae58a2ec78fdd3d4',
     ]
   }
   /**

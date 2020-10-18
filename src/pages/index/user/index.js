@@ -99,7 +99,7 @@ class Index extends Component {
   }
 
   render() {
-    let src = 'https://ipxcdn.jfshare.com/ipxmall/avatar/1124addfcd0cec4ae8db434154d8162a.jpg'
+    let src = 'https://ipxcdn.jfshare.com/ipxmall/eb734bde185fe94789288fc7b69365a0'
     let srcLogo = 'https://ipxcdn.jfshare.com/ipxmall/6ce565e43f93c837395add8da8334012'
 
     let { isOpened,data,list }=this.state;
@@ -113,7 +113,7 @@ class Index extends Component {
           </View>
           <View className='header-text-wrap'>
             <View>
-              <View className='info-num'>用户名称</View>
+              <View className='info-num'>天生骄傲</View>
               <View className='info-level'>LV2</View>
             </View>
             <View>
