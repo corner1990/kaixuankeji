@@ -9,6 +9,7 @@ export default {
     'pages/orderList/index',
     'pages/my/index',
     'pages/my-book/index',
+    'pages/address/index'
   ],
   window: {
     navigationStyle: 'custom',

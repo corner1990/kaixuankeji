@@ -1,0 +1,18 @@
+@import '../../scss/index.scss';
+.UserAddressWrap{
+  position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  padding-bottom: 120px;
+  overflow: auto;
+  box-sizing: border-box;
+  .AddressList{
+    padding: 24px;
+  }
+  .AddressListView{
+    height: 100%;
+  }
+  .at-modal__container{
+    width: 66vw;
+  }
+}

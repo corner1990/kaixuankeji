@@ -12,24 +12,23 @@
   }
 }
 .header {
+  @include flex(flex-start, center);
   padding: 15px 0px;
   overflow: hidden;
   margin: 100px 30px 0 30px;
   .header-icon-wrap{
-    float: left;
     display: inline-block;
-    margin-right: 50px;
   }
   .header-text-wrap{
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
+    @include flex(space-between, center);
+    flex: 1;
+    margin-left: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Microsoft YaHei, FangSong;
     // text-align: right;
   }
   .avatar {
-    width: 100px;
-    height: 100px;
+    width: 160px;
+    height: 160px;
     border-radius: 100%;
     border:1px $bg-grey solid;
   }
@@ -38,7 +37,7 @@
     font-size: 28px;
   }
   .info-level{
-    color: $bg-grey;
+    color: $black85;
     font-size: 20px;
     width: 100px;
     height: 30px;
@@ -58,11 +57,12 @@
 // }
 .nav{
   @include flex(space-around, center);
+  @include shadow;
   border: 1px #ddd solid;
   background: #fff;
   padding: 30px 0px;
   margin: 20px;
-  border-radius: 32px;
+  border-radius: 20px;
   text-align: center;
   // position: absolute;
   // top: 280px;
