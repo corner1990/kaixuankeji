@@ -38,13 +38,12 @@ class Index extends Component {
     }
 
     render() {
-        let src = 'https://wx3.sinaimg.cn/mw690/008b8TwTgy1giboq2g2lmj30qk0aw16s.jpg'
-        let src2 = 'https://wx3.sinaimg.cn/mw690/008b8TwTgy1gibp9swnntj302a029jrn.jpg'
         
         return (
-          <View className='article'>
+          <View className='article-tab-wrap'>
             {/* <CustomNavBar title='发现' /> */}
             {this.createItem()}
+            {/* <ArticleItem /> */}
           </View>
         )
     }

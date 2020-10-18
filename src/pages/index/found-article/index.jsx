@@ -38,7 +38,7 @@ class FoundArticle extends Component {
           info.content.map((item, key) => this.initConent(item, key))
         }
       </View>
-    </View>)
+    </View>) 
   }
 }
 

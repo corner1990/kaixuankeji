@@ -5,7 +5,7 @@ import CustomNavBar from '../../components/navbar'
 // import SearchBar from './found/searchBar'
 import Found from './found/found'
 import Community from './community'
-// import Article from './article' // 文章列表页
+import Article from './article' // 文章列表页
 import Live from './live' //积分列表页
 import './index.scss'
 
@@ -15,7 +15,16 @@ export default class Index extends Component {
     current: 3,
     tabList: [
       {
-        title: '找宝吧'
+        title: '关于虹膜'
+      },
+      {
+        title: '公益头条'
+      },
+      {
+        title: '公益活动'
+      },
+      {
+        title: '工作站'
       },
       {
         title: '找宝社区'
@@ -56,6 +65,7 @@ export default class Index extends Component {
         {/* <SearchBar className='found-search' /> */}
         
         <AtTabs
+          scroll
           current={current}
           tabList={tabList}
           onClick={tabChange}
@@ -70,7 +80,7 @@ export default class Index extends Component {
             <Live></Live>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={3}>
-            <Community></Community>
+            <Article></Article>
           </AtTabsPane>
         </AtTabs>
       </View>

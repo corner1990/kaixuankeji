@@ -93,6 +93,11 @@ class Index extends Component {
     this.setState({ isOpened:true })
   }
 
+  
+  toMail = (item) => {
+    this.props.setTab(2)
+  }
+
   render() {
     let src = 'https://ipxcdn.jfshare.com/ipxmall/avatar/1124addfcd0cec4ae8db434154d8162a.jpg'
     let srcLogo = 'https://ipxcdn.jfshare.com/ipxmall/6ce565e43f93c837395add8da8334012'
@@ -116,21 +121,20 @@ class Index extends Component {
             </View>
           </View>
         </View>
-       <View className="article"></View>
+
        <View className='nav'>
-            <View>
-              <View className='nav-num'>5320</View>
-              <View className='nav-text'>我的积分</View>
-            </View>
-            <View>
-              <View className='nav-num'>218</View>
-              <View className='nav-text'>我的收藏</View>
-            </View>
-            <View>
-              <View className='nav-num'>156</View>
-              <View className='nav-text'>我的分享</View>
-            </View>
+          <View>
+            <View className='nav-num'>5320</View>
+            <View className='nav-text'>优惠券</View>
           </View>
+          <View>
+            <View className='nav-num'>218</View>
+            <View className='nav-text'>积分</View>
+          </View>
+          <View>
+            <View onClick={this.toMail}>积分商城</View>
+          </View>
+        </View>
         <HomePageComponents data={data} click1={this.toEndorsement} />
         <HomePageComponents data={list} click1={this.toEndorsement} />
 
