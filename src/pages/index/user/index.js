@@ -27,16 +27,14 @@ class Index extends Component {
         id: '2',
       },
       {
-        name: '申请成为代理人',
-        id: '3',
-      },
-      {
-        name: '加盟站点',
+        name: '在线加盟',
         id: '4',
+        click: () => this.props.setTab(5)
       },
       {
         name: '商务合作',
         id: '5',
+        click: () => this.props.setTab(4)
       }
     ],
     list: [
@@ -56,10 +54,6 @@ class Index extends Component {
         name: '联系我们',
         id: '4',
       },
-      {
-        name: '商务合作',
-        id: '5',
-      }
     ]
   }
 
@@ -102,6 +96,11 @@ class Index extends Component {
   toMail = (item) => {
     this.props.setTab(2)
   }
+
+  toBusiness = (item) => {
+    this.props.setTab(3)
+  }
+
   userClick = e => {
     console.log('123 userClick')
     e.stopPropagation()

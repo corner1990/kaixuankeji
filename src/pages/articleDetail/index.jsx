@@ -43,16 +43,16 @@ export default class Index extends Component {
       <View className='article-detail'>
         <CustomNavbar title='发现' color='#333' clickLeft={this.clickLeft}></CustomNavbar>
         <View className='content-wrap'>
-          <View className='title'>明星导师-技术分享</View>
+          <View className='title'>CCTV2021《超强宝⻉》少⼉春晚扬州选区启动仪式</View>
           <View className='article-info'>
             <View className='tag'>原创</View>
-            <Text>时尚融缘</Text>
-            <Text className='red'>技术分享</Text>
+            <Text>济南⼯作站</Text>
+            {/* <Text className='red'>技术分享</Text> */}
             <Text>今天</Text>
           </View>
-          <Slogin></Slogin>
-          <Image src='https://wx4.sinaimg.cn/mw690/008b8TwTgy1gic4pxxgqhj30hw0nikb7.jpg' className='content-img' style={{ height: 440 }}></Image>
-          <Image src='https://wx4.sinaimg.cn/mw690/008b8TwTgy1gic4pxvjiwj30ht0nhdjh.jpg' className='content-img' style={{ height: 440 }}></Image>
+          
+          <Image src='https://ipxcdn.jfshare.com/ipxmall/aa139104a1d03a2526938a1daa000f90' className='content-img' style={{ height: 3000 }}></Image>
+
           <View className='share-wrap'>
             <View className='num-wrap'>阅读1220</View>
             <View className='icon-wrap'>
@@ -64,13 +64,13 @@ export default class Index extends Component {
             </View>
           </View>
 
-          <View className='adv-wrap'>
+          {/* <View className='adv-wrap'>
             <Image src={adcSrc} className='adv-img'></Image>
             <View>
               <Text className='adv-text'>独立合作品牌</Text>
               <AtButton type='primary' size='small' className='buy-btn'>立即抢购</AtButton>
             </View>
-          </View>
+          </View> */}
         </View>
 
       </View>
