@@ -1,9 +1,9 @@
 export default {
   pages: [
-    'pages/city-site/index',
     'pages/index/index',
+    'pages/city-site/index',
     'pages/city-site-detail/index',
-    
+    'pages/book-result/index',
     'pages/productDetail/index',
     'pages/teacherInfo/index',
     'pages/subscribe/index',

@@ -13,20 +13,36 @@ import './index.scss'
  * @desc 城市工作站
  */
 class CitySitePage extends React.Component{
+  state = {
+    bookShow: false
+  }
+  /**
+   * @desc 返回
+   */
   backHistory = () => {
     Taro.navigateBack()
+  }
+  /**
+   * @desc 更新数据
+   */
+  update = (key, val) => {
+    this.setState({
+      [key]: val
+    })
   }
   render() {
     return (<View className='CitySiteDetail'>
       <CustomNavBar
-        title='站点名称'
+        title='站点详情'
         clickLeft={this.backHistory}
       />
       <Swiper />
-      <SiteInfo />
+      <SiteInfo update={this.update} />
       <SiteImgs />
-      <AtActionSheet isOpened >
-        <BookSite />
+      <AtActionSheet
+        isOpened={this.state.bookShow}
+      >
+        <BookSite update={this.update} />
       </AtActionSheet>
     </View>)
   }
