@@ -20,7 +20,7 @@ class Home extends Component {
         title: '公益头条'
       },
       {
-        title: '公益新闻'
+        title: '公益活动'
       }
     ]
   }

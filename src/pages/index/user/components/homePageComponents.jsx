@@ -18,15 +18,16 @@ export default class Index extends Component {
  
   
   render () {
-    const { data,click1 } = this.props;
-    console.log(data, 'data')
+    const { data } = this.props;
+    
     return (
-      <View className='homePage'>
+      <View className='UserCardWrap'>
         {
           data.map((item) => {
+            let { click = () => {} } = item
              return (
-               <View key={item.id}>
-                <View className='common' onClick={(item)=>{click1(item)}}>
+               <View key={item.id} className='UserCard'>
+                <View className='common' onClick={click}>
                   <View className='commonLeft'>
                     <View className='commonLeftHade'>{item.name}</View>
                   </View>
